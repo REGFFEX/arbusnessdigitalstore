@@ -1,0 +1,24 @@
+﻿import { supabase } from '../config/supabase'
+
+export async function getProducts() {
+  const { data, error } = await supabase
+    .from('Product')
+    .select('*')
+    .order('createdAt', { ascending: false })
+    .limit(100)
+
+  if (error) throw error
+  return data
+}
+
+export async function getProductById(id: string) {
+  const { data, error } = await supabase.from('Product').select('*').eq('id', id).single()
+  if (error) throw error
+  return data
+}
+
+export async function getAds(position = 'home') {
+  const { data, error } = await supabase.from('Ad').select('*').eq('position', position).eq('active', true)
+  if (error) throw error
+  return data
+}

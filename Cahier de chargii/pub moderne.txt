@@ -1,0 +1,274 @@
+# 📘 EXTENSION — SYSTÈME PUBLICITÉ MODERNE (ADS PRO)
+
+**AR BUSINESS — DIGITAL STORE**
+Objectif : Générer des revenus sans dégrader l’expérience utilisateur
+Principe : Publicité intelligente • Non intrusive • Contrôlée • Flexible • Moderne
+
+---
+
+# 1. PHILOSOPHIE PUBLICITAIRE
+
+Le système publicité doit :
+
+* Ne pas déranger l’utilisateur
+* Ne jamais bloquer l’usage principal
+* Être courte et contrôlée
+* Être fermable
+* Être rapide à charger
+* Être intelligente (selon contexte)
+* Permettre monétisation du site
+* Offrir option : regarder publicité → débloquer contenu
+
+Expérience : **User-first, revenue-smart**
+
+---
+
+# 2. TYPES DE PUBLICITÉS SUPPORTÉES
+
+## 1. Publicité Vidéo Courte (Reward / Non intrusive)
+
+Durée :
+
+* 5 secondes (skippable)
+* 8 secondes
+* 10 secondes MAX
+
+Éléments UI :
+
+* Barre progression (temps restant)
+* Bouton X (fermer)
+* Bouton Skip (si autorisé)
+* Auto play silencieux
+* Plein écran léger ou bloc intégré
+* Chargement rapide
+
+Utilisation :
+
+* Débloquer téléchargement premium
+* Débloquer contenu freemium
+* Voir contenu exclusif
+* Option “Regarder publicité pour continuer”
+
+---
+
+## 2. Publicité Image / Bannière Légère
+
+Format :
+
+* Rectangle horizontal
+* Petite bannière
+* Carte sponsorisée
+* Image simple non animée (ou animation légère)
+
+Caractéristiques :
+
+* Chargement rapide
+* Non intrusive
+* Pas de son
+* Fermable
+* Discrète
+
+Placement :
+
+* Accueil (1 max)
+* Store (1 max)
+* Fiche produit (1 max)
+
+---
+
+## 3. Publicité Interactive (Bouton direction)
+
+Exemple :
+
+* Installer app externe
+* Ouvrir lien sponsor
+* Voir produit sponsorisé
+* Lancer service externe
+
+Éléments :
+
+* Image / Logo
+* Bouton action
+* Texte court
+* Badge "Sponsorisé"
+
+---
+
+## 4. Publicité Reward (Déblocage)
+
+Principe :
+
+Utilisateur peut :
+
+* Regarder publicité → débloquer téléchargement
+* Regarder publicité → accéder premium temporaire
+* Regarder publicité → supprimer restriction
+* Regarder publicité → obtenir bonus
+
+Cas :
+
+Produit Freemium
+→ bouton :
+"Regarder publicité pour télécharger gratuitement"
+
+---
+
+# 3. ÉLÉMENTS UI PUBLICITÉ
+
+Chaque publicité vidéo doit contenir :
+
+* Barre progression (temps restant)
+* Bouton X (fermer)
+* Bouton Skip (si > 5 sec)
+* Badge "Ad"
+* Timer visible
+* Chargement rapide
+* Aucun blocage total
+
+---
+
+# 4. RÈGLES UX (IMPORTANT)
+
+* Pas plus de 2 ads par page
+* Pas d’auto popup agressif
+* Pas de son automatique
+* Fermeture toujours possible
+* Pas de répétition abusive
+* Chargement async
+* Pas bloquer navigation
+* Pas ralentir site
+
+---
+
+# 5. MONÉTISATION INTELLIGENTE
+
+## Modes revenus
+
+* Publicités affichées
+* Publicités Reward
+* Produits sponsorisés
+* Produits premium
+* Services premium
+* Vente produits digitaux
+* Formation vidéo
+* Outils payants
+
+---
+
+# 6. PRODUITS MULTI-TYPE (EXTENSION)
+
+Le système produit doit supporter plusieurs types :
+
+## Types possibles
+
+* Application
+* Logiciel
+* Service digital
+* Fichier
+* Outil
+* Système
+* Formation vidéo
+* Vidéo premium
+* Ressource
+* Produit sponsorisé
+
+Admin peut sélectionner **multi-types**.
+
+---
+
+# 7. STRUCTURE PRODUIT (EXTENSION)
+
+Fiche produit doit afficher :
+
+* Type principal
+* Sous-types (multi)
+* Licence (Free / Freemium / Premium)
+* Format (App / Vidéo / Fichier / Service)
+* Accès (Direct / Reward / Payant)
+
+---
+
+# 8. GESTION ADMIN — PUBLICITÉS
+
+Admin peut :
+
+* Ajouter publicité
+* Choisir type (vidéo / image / reward)
+* Définir durée
+* Définir position
+* Activer / désactiver
+* Voir stats
+* Lier publicité à produit
+* Lier publicité à déblocage
+
+---
+
+# 9. BASE DE DONNÉES ADS (STRUCTURE)
+
+Table : ads
+
+* id
+* title
+* type (video / banner / reward)
+* mediaUrl
+* duration
+* skippable
+* position (home / store / product)
+* active
+* linkedProduct (optionnel)
+* createdAt
+
+---
+
+# 10. PERFORMANCE & OPTIMISATION
+
+* Ads lazy load
+* Compression vidéo
+* Cache navigateur
+* Chargement async
+* Pas bloquer UI
+* Taille vidéo optimisée
+* Maximum 720p
+* < 2MB recommandé
+
+---
+
+# 11. SÉCURITÉ PUBLICITÉ
+
+* Pas de script externe dangereux
+* Média validé
+* Domaine autorisé
+* Pas tracking abusif
+* Pas popup forcé
+
+---
+
+# 12. EXPÉRIENCE UTILISATEUR FINALE
+
+L’utilisateur doit ressentir :
+
+* Publicité légère
+* Contrôle total
+* Pas de frustration
+* Navigation fluide
+* Choix : payer ou regarder ad
+* Site rapide
+* Interface propre
+
+---
+
+# RÉSULTAT
+
+Système publicité :
+
+* Moderne ✔
+* Non intrusif ✔
+* Flexible ✔
+* Monétisable ✔
+* Compatible Store ✔
+* Contrôlé ✔
+* UX safe ✔
+
+---
+
+# FIN — EXTENSION ADS PRO

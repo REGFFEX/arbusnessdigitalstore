@@ -1,0 +1,21 @@
+﻿AR Business — Digital Store
+
+Starter scaffold created by GitHub Copilot (assistant).
+
+Stack:
+- React + Vite + TypeScript
+- TailwindCSS (minimal)
+- Supabase client config
+- Prisma schema
+
+Files added:
+- package.json, vite.config.ts, netlify.toml
+- prisma/schema.prisma
+- src/ (app, pages, components, services, styles)
+- .env.example
+
+Notes:
+- Replace env values in .env with your Supabase keys and DATABASE_URL.
+- Run `npm install` then `npm run dev`.
+- Prisma client generation requires a valid DATABASE_URL.
+

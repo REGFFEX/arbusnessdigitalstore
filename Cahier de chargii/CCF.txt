@@ -1,0 +1,281 @@
+📘 CCF — CAHIER DES CHARGES FONCTIONNEL
+
+AR BUSINESS — DIGITAL STORE
+Plateforme de distribution et vente de produits & services digitaux
+Niveau : Store professionnel — Architecture légère — Base Supabase optimisée
+
+---
+
+1. OBJECTIF DU SYSTÈME
+
+Créer une plateforme Store digital permettant :
+
+- Recherche de produits digitaux
+- Téléchargement sécurisé
+- Distribution par catégories
+- Gestion Free / Freemium / Premium
+- Classement type Store (Top / Récent / Populaire)
+- Expérience fluide mobile & desktop
+- Publicités courtes intégrées (5–10 sec)
+- Gestion admin simple
+- Système léger (sans réseau social / sans communication avancée)
+
+---
+
+2. TYPES DE CONTENU
+
+Produits digitaux
+
+- Applications
+- Logiciels
+- Outils digitaux
+- Fichiers
+- Systèmes / OS
+- Ressources
+
+Services digitaux
+
+- Solutions techniques
+- Services numériques
+- Outils business
+- Systèmes digitaux
+
+---
+
+3. MODÈLES PRODUITS
+
+Chaque produit doit appartenir à :
+
+Licence
+
+- Free
+- Freemium
+- Premium
+
+Type
+
+- Application
+- Logiciel
+- Service
+- Fichier
+- Système
+
+OS compatible
+
+- Android
+- Windows
+- Linux
+- Web
+- Multi-OS
+
+---
+
+4. STRUCTURE FICHE PRODUIT
+
+Chaque produit contient :
+
+- Logo / Image
+- Nom
+- Version
+- Type
+- Catégorie
+- Licence (Free / Freemium / Premium)
+- OS compatible
+- Taille fichier
+- Description courte
+- Description détaillée
+- Screenshots / Images
+- Statut (Stable / Beta / New)
+- Bouton Télécharger
+- Bouton Voir détail
+- Date mise à jour
+- Sécurité vérifiée
+- Signature / Source
+- Produits liés
+- Tags
+
+---
+
+5. INTERACTIONS UTILISATEUR (TYPE STORE PRO)
+
+Navigation
+
+- Scroll fluide
+- Recherche instantanée
+- Filtres dynamiques
+- Catégories cliquables
+- Cartes adaptatives responsive
+
+Consultation produit
+
+Fonctionnement similaire aux grands stores :
+
+- Cliquer carte → ouvre fiche produit
+- Images défilantes
+- Bouton télécharger visible
+- Infos techniques affichées
+- Produits liés suggérés
+- Badge Free / Premium visible
+- Badge OS visible
+
+Téléchargement
+
+- Bouton Télécharger direct
+- Vérification fichier
+- Téléchargement sécurisé
+- Statut fichier affiché
+
+---
+
+6. RECHERCHE AVANCÉE
+
+Filtres disponibles :
+
+- Type produit
+- OS
+- Licence (Free / Freemium / Premium)
+- Version
+- Taille
+- Popularité
+- Date
+- Tags
+
+Recherche dynamique en temps réel.
+
+---
+
+7. CLASSEMENTS STORE
+
+Sections :
+
+- Top Apps
+- Plus récents
+- Populaires
+- Recommandés
+- Premium
+- Outils essentiels
+
+---
+
+8. PUBLICITÉS INTÉGRÉES (ADS)
+
+Caractéristiques :
+
+- Vidéo 5–10 secondes max
+- Non intrusive
+- Placement discret
+- Maximum :
+  - Accueil : 1–2
+  - Fiche produit : 1
+- Gérée par Admin
+- Chargement optimisé
+
+---
+
+9. MESSAGES SYSTÈME
+
+Le système doit afficher :
+
+- Nouveau produit ajouté
+- Mise à jour disponible
+- Fichier vérifié
+- Produit premium
+- Produit indisponible
+- Maintenance
+- Sécurité confirmée
+
+---
+
+10. ADMIN — FONCTIONS
+
+- Ajouter produit
+- Modifier produit
+- Supprimer produit
+- Upload fichier
+- Upload images
+- Gérer catégories
+- Gérer services
+- Gérer licences
+- Gérer Ads
+- Voir statistiques
+- Gérer Premium
+- Gestion sécurité
+
+---
+
+11. FOOTER — ÉLÉMENTS
+
+Sections :
+
+Navigation
+
+- Accueil
+- Store
+- Catégories
+- Premium
+- Services
+- À propos
+
+Produits
+
+- Apps
+- Logiciels
+- Outils
+- Ressources
+
+Support
+
+- Aide
+- Sécurité
+- Conditions
+- Politique
+
+Social
+
+- WhatsApp
+- Facebook Lite
+- TikTok
+- Email
+
+---
+
+12. SYSTÈME RESPONSIVE
+
+- Cartes adaptatives
+- Mobile first
+- Grille dynamique
+- Boutons accessibles
+- Chargement rapide
+- UI fluide
+
+---
+
+13. SÉCURITÉ
+
+- Fichiers vérifiés
+- Téléchargement sécurisé
+- Protection base
+- Pas de communication publique
+- Système léger
+- Anti abus
+
+---
+
+14. IDENTITÉ VISUELLE
+
+Couleurs :
+
+- Noir
+- Or (Primary)
+- Gris tech
+
+Style :
+
+- Pro
+- Moderne
+- Store professionnel
+- Clair & rapide
+
+---
+
+FIN CCF

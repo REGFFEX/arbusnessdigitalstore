@@ -1,0 +1,34 @@
+﻿import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from '../pages/Home'
+import Store from '../pages/Store'
+import ProductPage from '../pages/Product'
+import AdminDashboard from '../pages/Admin/Dashboard'
+import AdminLogin from '../pages/Admin/Login'
+import ProtectedRoute from '../components/ProtectedRoute'
+import AddProduct from '../pages/Admin/AddProduct'
+import ManageProducts from '../pages/Admin/ManageProducts'
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route
+          path="/admin/*"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        >
+          <Route path="add" element={<AddProduct />} />
+          <Route path="manage" element={<ManageProducts />} />
+        </Route>
+      </Routes>
+    </div>
+  )
+}

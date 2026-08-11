@@ -1,0 +1,25 @@
+﻿import { supabase } from '../config/supabase'
+
+// NOTE: Ensure your Supabase table names are lowercase if using the REST/JS client.
+export async function getProducts() {
+  const { data, error } = await supabase
+    .from('products')
+    .select('*')
+    .order('createdAt', { ascending: false })
+    .limit(100)
+
+  if (error) throw error
+  return data
+}
+
+export async function getProductById(id: string) {
+  const { data, error } = await supabase.from('products').select('*').eq('id', id).single()
+  if (error) throw error
+  return data
+}
+
+export async function getAds(position = 'home') {
+  const { data, error } = await supabase.from('ads').select('*').eq('position', position).eq('active', true)
+  if (error) throw error
+  return data
+}

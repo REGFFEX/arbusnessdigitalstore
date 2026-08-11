@@ -1,0 +1,25 @@
+﻿import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
+
+export default function AdminDashboard() {
+  return (
+    <div className="p-6">
+      <h1 className="text-2xl">Admin Dashboard (protected)</h1>
+      <div className="mt-4 flex gap-2">
+        <Link to="add" className="bg-gold text-black px-3 py-1 rounded">
+          Add Product
+        </Link>
+        <Link to="manage" className="bg-zinc-800 px-3 py-1 rounded">
+          Manage Products
+        </Link>
+        
+        <Link to="ads" className="bg-zinc-800 px-3 py-1 rounded">
+          Manage Ads
+        </Link>
+      </div>
+      <div className="mt-6">
+        <Outlet />
+      </div>
+    </div>
+  )
+}

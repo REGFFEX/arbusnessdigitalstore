@@ -1,0 +1,48 @@
+{
+  "name": "ar-business-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "6.4.1",
+    "@supabase/supabase-js": "^2.27.0",
+    "crypto-js": "^4.2.0",
+    "db": "^6.0.3",
+    "docx": "^9.6.1",
+    "file-saver": "^2.0.5",
+    "jspdf": "^4.2.0",
+    "jspdf-autotable": "^5.0.7",
+    "jszip": "^3.10.1",
+    "npx": "^10.2.2",
+    "pull": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.1",
+    "recharts": "^3.7.0",
+    "xlsx": "^0.18.5",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/file-saver": "^2.0.7",
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^5.1.0",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.26",
+    "prettier": "^2.8.8",
+    "prisma": "6.4.1",
+    "tailwindcss": "^3.4.19",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "vite": "^7.3.1"
+  }
+}

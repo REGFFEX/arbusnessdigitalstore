@@ -1,0 +1,337 @@
+📙 CCUI-UX — CAHIER DES CHARGES UI / UX
+
+AR BUSINESS — DIGITAL STORE
+Style : Store professionnel • Moderne • Dark • Premium • Responsive complet
+
+---
+
+1. IDENTITÉ VISUELLE
+
+Couleurs principales
+
+- Noir profond → Fond principal
+- Or → Couleur primaire (premium / action / identité)
+- Gris foncé → Surfaces / cartes
+- Gris clair → Texte secondaire
+- Blanc → Texte principal
+
+Style
+
+- Professionnel
+- Minimal moderne
+- Fluide
+- Lisible
+- Inspiré Store modernes
+- Mobile-first
+
+---
+
+2. STRUCTURE VISUELLE GLOBALE
+
+Hiérarchie écran :
+
+HEADER / NAVBAR
+↓
+SECTION HERO
+↓
+CATÉGORIES
+↓
+TOP / RÉCENTS / POPULAIRES
+↓
+ADS COURTE (5–10 sec)
+↓
+STORE GRID
+↓
+SERVICES
+↓
+FOOTER
+
+---
+
+3. HEADER / NAVBAR
+
+Éléments :
+
+- Logo (gauche)
+- Nom AR Business
+- Barre recherche centrale
+- Icône filtres
+- Bouton Premium
+- Menu mobile (☰)
+
+Mobile :
+
+- Menu slide
+- Barre recherche visible
+
+---
+
+4. HERO SECTION
+
+Contenu :
+
+- Titre : Digital Store Platform
+- Sous-titre
+- Barre recherche large
+- Boutons :
+  - Explorer Store
+  - Premium
+  - Services
+
+Fond sombre + glow or discret.
+
+---
+
+5. CATÉGORIES VISUELLES
+
+Cartes horizontales scrollables :
+
+- Apps
+- Logiciels
+- Outils
+- Services
+- OS
+- Ressources
+
+Interaction :
+Tap → ouvre catégorie.
+
+---
+
+6. STORE GRID (CARTES PRODUITS)
+
+Responsive
+
+Desktop :
+4 colonnes
+Tablet :
+2 colonnes
+Mobile :
+1 colonne
+
+Carte produit
+
+Structure :
+
+- Image / Icon
+- Nom
+- Version
+- Badge licence :
+  - Free (gris)
+  - Freemium (or)
+  - Premium (or glow)
+- Badge OS
+- Taille
+- Bouton Télécharger
+- Bouton Détails
+
+Hover :
+
+- Glow or
+- Scale léger
+- Ombre
+
+Mobile :
+
+- Tap → ouvre fiche produit
+
+---
+
+7. LISTES STORE
+
+Sections :
+
+- Top Apps
+- Plus récents
+- Populaires
+- Recommandés
+- Premium
+
+Format :
+Scroll horizontal cartes.
+
+---
+
+8. PAGE PRODUIT (DETAIL)
+
+Structure verticale :
+
+Header produit
+
+- Icon
+- Nom
+- Version
+- Licence badge
+- OS badge
+
+Screenshots
+
+Slider horizontal swipe.
+
+Description
+
+Courte + complète.
+
+Infos techniques
+
+- Taille
+- Version
+- Sécurité
+- Signature
+- Date update
+
+Boutons
+
+- Télécharger (principal)
+- Premium (si payant)
+
+Produits similaires
+
+Grid horizontal.
+
+Mini Ads (5–10 sec)
+
+---
+
+9. RECHERCHE & FILTRES
+
+Barre intelligente :
+
+Recherche instant.
+
+Filtres :
+
+- Type
+- OS
+- Licence (Free / Freemium / Premium)
+- Version
+- Taille
+- Popularité
+- Date
+
+UI :
+Drawer mobile / sidebar desktop.
+
+---
+
+10. ADS (UI)
+
+Format :
+
+- Vidéo 5–10 sec
+- Rectangle discret
+- Auto play mute
+- Non bloquant
+- Fermeture possible
+
+Placement :
+
+- Accueil
+- Fiche produit
+
+---
+
+11. SERVICES PAGE
+
+Cartes verticales :
+
+- Nom service
+- Description
+- Bouton Demande
+
+Style pro.
+
+---
+
+12. PREMIUM SECTION
+
+Design Or accentué :
+
+- Glow
+- Cartes premium
+- Badges
+- Style exclusif
+
+---
+
+13. FOOTER
+
+Colonnes :
+
+Navigation
+
+Accueil / Store / Premium / Services / About
+
+Produits
+
+Apps / Logiciels / Outils / Ressources
+
+Support
+
+Aide / Sécurité / Conditions
+
+Social
+
+WhatsApp / Facebook Lite / TikTok / Email
+
+Fond noir + texte gris.
+
+---
+
+14. RESPONSIVE
+
+Mobile-First :
+
+- Cartes adaptatives
+- Boutons accessibles
+- Scroll fluide
+- Images optimisées
+- Grilles dynamiques
+
+---
+
+15. INTERACTIONS UX
+
+- Navigation fluide
+- Tap rapide
+- Chargement progressif
+- Skeleton loader
+- Feedback bouton
+- Messages système
+- Téléchargement clair
+- Badges visibles
+- Expérience simple
+
+---
+
+16. DESIGN CARTES — DIMENSIONS
+
+Desktop :
+~260px largeur
+
+Tablet :
+~45%
+
+Mobile :
+100%
+
+Ratio image :
+1:1 ou 4:3
+
+---
+
+17. EXPÉRIENCE UTILISATEUR
+
+Objectifs :
+
+- Trouver produit rapidement
+- Comprendre licence
+- Télécharger facilement
+- Naviguer fluide
+- UI propre
+- Pas de surcharge
+- Store pro
+
+---
+
+FIN CCUI-UX

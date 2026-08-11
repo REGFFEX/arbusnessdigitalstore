@@ -1,0 +1,74 @@
+﻿import React, { useState } from 'react'
+import { uploadToStorage, getPublicUrl, createProduct } from '../../services/admin'
+
+export default function AddProduct() {
+  const [name, setName] = useState('')
+  const [version, setVersion] = useState('1.0')
+  const [license, setLicense] = useState('Free')
+  const [imageFile, setImageFile] = useState<File | null>(null)
+  const [fileFile, setFileFile] = useState<File | null>(null)
+  const [status, setStatus] = useState('Stable')
+  const [message, setMessage] = useState<string | null>(null)
+
+  async function submit(e: React.FormEvent) {
+    e.preventDefault()
+    try {
+      if (!imageFile || !fileFile) throw new Error('Image and file required')
+
+      // upload image
+      const imagePath = `images/${Date.now()}_${imageFile.name}`
+      await uploadToStorage('images', imagePath, imageFile)
+      const imageUrl = getPublicUrl('images', imagePath)
+
+      // upload file
+      const filePath = `files/${Date.now()}_${fileFile.name}`
+      await uploadToStorage('files', filePath, fileFile)
+      // For files we store path and optionally a public preview URL; downloads will use signed URLs
+      const fileUrl = getPublicUrl('files', filePath)
+
+      const product = {
+        name,
+        version,
+        license,
+        image: imageUrl,
+        fileUrl,
+        filePath,
+        imagePath,
+        status
+      }
+
+      await createProduct(product)
+      setMessage('Product created')
+      setName('')
+      setVersion('1.0')
+      setImageFile(null)
+      setFileFile(null)
+    } catch (err: any) {
+      setMessage(err.message || 'Error')
+    }
+  }
+
+  return (
+    <div className="p-6 max-w-2xl">
+      <h2 className="text-xl mb-4">Add Product</h2>
+      <form onSubmit={submit} className="flex flex-col gap-2">
+        <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Name" className="p-2 rounded bg-zinc-900" />
+        <input value={version} onChange={(e) => setVersion(e.target.value)} placeholder="Version" className="p-2 rounded bg-zinc-900" />
+        <select value={license} onChange={(e) => setLicense(e.target.value)} className="p-2 rounded bg-zinc-900">
+          <option>Free</option>
+          <option>Freemium</option>
+          <option>Premium</option>
+        </select>
+        <input type="file" onChange={(e) => setImageFile(e.target.files?.[0] ?? null)} />
+        <input type="file" onChange={(e) => setFileFile(e.target.files?.[0] ?? null)} />
+        <select value={status} onChange={(e) => setStatus(e.target.value)} className="p-2 rounded bg-zinc-900">
+          <option>Stable</option>
+          <option>Beta</option>
+          <option>New</option>
+        </select>
+        <button className="bg-gold text-black py-2 rounded mt-2">Create</button>
+        {message && <p className="text-gray-300">{message}</p>}
+      </form>
+    </div>
+  )
+}

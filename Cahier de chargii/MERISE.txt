@@ -1,0 +1,1198 @@
+📘 AR BUSINESS DIGITAL STORE
+MCD — MODÈLE CONCEPTUEL DE DONNÉES
+1️⃣ Principe du MCD
+Le MCD décrit ce que le système doit mémoriser, indépendamment :
+des technologies
+du langage
+de l’implémentation
+👉 Il représente la vérité métier du système AR BUSINESS Digital Store.
+2️⃣ Entités principales
+🔹 UTILISATEUR
+Représente une personne utilisant le système.
+Attributs :
+id_utilisateur (identifiant)
+type_utilisateur (admin / visiteur)
+nom
+email
+mot_de_passe (hashé)
+statut (actif / suspendu)
+date_creation
+date_derniere_connexion
+👉 Seuls les admins ont accès à l’administration.
+🔹 PRODUIT
+Entité centrale du système.
+Attributs :
+id_produit
+nom_produit
+description_courte
+description_longue
+statut_produit (prototype / test / stable)
+actif (oui / non)
+date_creation
+date_mise_a_jour
+🔹 CATEGORIE
+Permet de classer les produits.
+Attributs :
+id_categorie
+nom_categorie
+description
+actif
+🔹 FICHIER
+Représente une application ou ressource téléchargeable.
+Attributs :
+id_fichier
+type_fichier (apk / exe / zip / autre)
+version
+taille
+chemin_stockage
+source_upload (mobile / desktop)
+actif
+date_upload
+🔹 IMAGE
+Représente les visuels associés aux produits.
+Attributs :
+id_image
+type_image (icone / capture / visuel)
+chemin_image
+ordre_affichage
+actif
+🔹 BOUTON_ACTION
+Bouton dynamique visible sur une fiche produit.
+Attributs :
+id_bouton
+type_bouton (Télécharger / Tester / Accéder / Découvrir / Lien externe)
+libelle
+destination (URL ou référence fichier)
+actif
+regles_affichage
+🔹 COMMENTAIRE
+Interaction communautaire liée à un produit.
+Attributs :
+id_commentaire
+contenu
+note (ex: 1 à 5)
+statut (en attente / validé / rejeté)
+date_creation
+🔹 MESSAGE_PRO
+Message professionnel envoyé via formulaire.
+Attributs :
+id_message
+categorie_message (emploi / partenariat / info / autre)
+contenu
+statut (nouveau / lu / traité / archivé)
+date_envoi
+🔹 TELECHARGEMENT
+Trace les actions de téléchargement.
+Attributs :
+id_telechargement
+date_telechargement
+source (bouton / page)
+ip (optionnel)
+user_agent (optionnel)
+🔹 SECTION_PAGE
+Éléments dynamiques composant les pages.
+Attributs :
+id_section
+type_section (texte / liste / galerie / lien)
+contenu
+position
+page
+actif
+3️⃣ Associations & cardinalités
+🔗 UTILISATEUR — PRODUIT
+Un UTILISATEUR (admin) peut créer 0,n PRODUITS
+Un PRODUIT est créé par 1 UTILISATEUR (admin)
+👉 Association : CRÉE
+🔗 PRODUIT — CATEGORIE
+Un PRODUIT appartient à 1,n CATEGORIES
+Une CATEGORIE contient 0,n PRODUITS
+👉 Association : CLASSER
+🔗 PRODUIT — FICHIER
+Un PRODUIT possède 0,n FICHIERS
+Un FICHIER appartient à 1 PRODUIT
+👉 Association : POSSEDE
+🔗 PRODUIT — IMAGE
+Un PRODUIT possède 0,n IMAGES
+Une IMAGE appartient à 1 PRODUIT
+👉 Association : ILLUSTRE
+🔗 PRODUIT — BOUTON_ACTION
+Un PRODUIT possède 0,n BOUTONS
+Un BOUTON_ACTION est lié à 1 PRODUIT
+👉 Association : PROPOSE
+🔗 PRODUIT — COMMENTAIRE
+Un PRODUIT reçoit 0,n COMMENTAIRES
+Un COMMENTAIRE concerne 1 PRODUIT
+👉 Association : REÇOIT
+🔗 UTILISATEUR — COMMENTAIRE
+Un UTILISATEUR (visiteur) peut écrire 0,n COMMENTAIRES
+Un COMMENTAIRE est écrit par 1 UTILISATEUR
+👉 Association : ECRIT
+🔗 UTILISATEUR — MESSAGE_PRO
+Un UTILISATEUR (visiteur) peut envoyer 0,n MESSAGES_PRO
+Un MESSAGE_PRO est envoyé par 1 UTILISATEUR
+👉 Association : ENVOIE
+🔗 FICHIER — TELECHARGEMENT
+Un FICHIER génère 0,n TELECHARGEMENTS
+Un TELECHARGEMENT concerne 1 FICHIER
+👉 Association : GENERE
+🔗 PRODUIT — SECTION_PAGE
+Un PRODUIT peut être affiché dans 0,n SECTIONS
+Une SECTION_PAGE peut référencer 0,n PRODUITS
+👉 Association : REFERENCE (relation n,n)
+4️⃣ Règles métier implicites (importantes)
+Un produit peut exister sans fichier
+Un bouton peut exister sans téléchargement
+Un commentaire n’est jamais public par défaut
+Les messages professionnels sont séparés des commentaires
+Les sections pilotent l’affichage, pas le code
+Les fichiers ne sont jamais exposés directement
+5️⃣ Résumé du MCD
+✔️ Toutes les entités réelles du système sont couvertes
+✔️ Aucune dépendance technique
+✔️ Compatible admin mobile
+✔️ Évolutif sans refonte
+✔️ Base saine pour MLD et MPD
+
+
+📘 AR BUSINESS DIGITAL STORE
+MLD — MODÈLE LOGIQUE DE DONNÉES
+1️⃣ Principes du MLD
+Chaque entité devient une table
+Chaque association 1,n → clé étrangère
+Chaque association n,n → table de liaison
+Les types restent logiques (pas encore SQL)
+2️⃣ Tables principales
+🧑 UTILISATEUR
+Copier le code
+
+UTILISATEUR
+---------
+id_utilisateur (PK)
+type_utilisateur
+nom
+email
+mot_de_passe
+statut
+date_creation
+date_derniere_connexion
+📦 PRODUIT
+Copier le code
+
+PRODUIT
+-------
+id_produit (PK)
+nom_produit
+description_courte
+description_longue
+statut_produit
+actif
+date_creation
+date_mise_a_jour
+id_utilisateur (FK → UTILISATEUR.id_utilisateur)
+👉 FK = admin créateur du produit
+🗂️ CATEGORIE
+Copier le code
+
+CATEGORIE
+---------
+id_categorie (PK)
+nom_categorie
+description
+actif
+🔗 PRODUIT_CATEGORIE (table de liaison n,n)
+Copier le code
+
+PRODUIT_CATEGORIE
+-----------------
+id_produit (PK, FK → PRODUIT.id_produit)
+id_categorie (PK, FK → CATEGORIE.id_categorie)
+📁 FICHIER
+Copier le code
+
+FICHIER
+-------
+id_fichier (PK)
+type_fichier
+version
+taille
+chemin_stockage
+source_upload
+actif
+date_upload
+id_produit (FK → PRODUIT.id_produit)
+🖼️ IMAGE
+Copier le code
+
+IMAGE
+-----
+id_image (PK)
+type_image
+chemin_image
+ordre_affichage
+actif
+id_produit (FK → PRODUIT.id_produit)
+🔘 BOUTON_ACTION
+Copier le code
+
+BOUTON_ACTION
+-------------
+id_bouton (PK)
+type_bouton
+libelle
+destination
+regles_affichage
+actif
+id_produit (FK → PRODUIT.id_produit)
+💬 COMMENTAIRE
+Copier le code
+
+COMMENTAIRE
+-----------
+id_commentaire (PK)
+contenu
+note
+statut
+date_creation
+id_produit (FK → PRODUIT.id_produit)
+id_utilisateur (FK → UTILISATEUR.id_utilisateur)
+📩 MESSAGE_PRO
+Copier le code
+
+MESSAGE_PRO
+-----------
+id_message (PK)
+categorie_message
+contenu
+statut
+date_envoi
+id_utilisateur (FK → UTILISATEUR.id_utilisateur)
+⬇️ TELECHARGEMENT
+Copier le code
+
+TELECHARGEMENT
+--------------
+id_telechargement (PK)
+date_telechargement
+source
+ip
+user_agent
+id_fichier (FK → FICHIER.id_fichier)
+🧩 SECTION_PAGE
+Copier le code
+
+SECTION_PAGE
+------------
+id_section (PK)
+type_section
+contenu
+position
+page
+actif
+🔗 SECTION_PRODUIT (liaison n,n)
+Copier le code
+
+SECTION_PRODUIT
+---------------
+id_section (PK, FK → SECTION_PAGE.id_section)
+id_produit (PK, FK → PRODUIT.id_produit)
+3️⃣ Contraintes logiques importantes
+UTILISATEUR.type_utilisateur pilote les droits (admin / visiteur)
+PRODUIT.actif = false ⇒ invisible publiquement
+FICHIER.actif = false ⇒ bouton téléchargement inactif
+COMMENTAIRE.statut ≠ validé ⇒ jamais exposé
+IMAGE.ordre_affichage contrôle le rendu UI
+Les suppressions sont logiques (désactivation) par défaut
+4️⃣ Ce que le MLD garantit
+✔️ Intégrité référentielle
+✔️ Séparation claire public / admin
+✔️ Upload mobile sans casse
+✔️ Historique exploitable
+✔️ Base solide pour statistiques & évolutions
+
+Parfait.
+On continue méthodiquement 👍
+Voici UNIQUEMENT le MCT (Modèle Conceptuel de Traitement), construit strictement à partir de ton CCT + MCD/MLD, sans rajouter de features fantômes.
+📘 AR BUSINESS DIGITAL STORE
+MCT — MODÈLE CONCEPTUEL DE TRAITEMENT
+1️⃣ Rôle du MCT (rappel rapide)
+Le MCT décrit :
+QUI déclenche une action
+QUOI est traité
+QUAND / POURQUOI
+QUELS flux de données sont utilisés
+SANS parler de technique (pas d’API, pas de SQL, pas de code)
+👉 C’est la logique métier pure du système.
+2️⃣ Acteurs du système
+Acteurs humains
+Visiteur
+Utilisateur (non authentifié)
+Admin
+Acteurs système
+Système AR BUSINESS Digital Store
+Base de données (source de vérité)
+3️⃣ Événements déclencheurs principaux
+Code
+Événement
+E1
+Consultation du site
+E2
+Consultation d’un produit
+E3
+Téléchargement d’un fichier
+E4
+Soumission commentaire
+E5
+Envoi message professionnel
+E6
+Connexion admin
+E7
+Création / modification produit
+E8
+Upload fichier
+E9
+Gestion images
+E10
+Configuration boutons
+E11
+Modération
+E12
+Activation / désactivation contenu
+4️⃣ Traitements métier (cœur du MCT)
+🔹 T1 — Affichage page publique
+Déclencheur :
+E1 – Consultation du site
+Acteur :
+Visiteur
+Traitement :
+Vérifier visibilité de la page
+Sélectionner sections actives
+Ordonner les sections
+Fournir contenu autorisé
+Résultat :
+Page affichée dynamiquement
+Aucune donnée sensible exposée
+🔹 T2 — Consultation d’un produit
+Déclencheur :
+E2 – Consultation d’un produit
+Acteur :
+Visiteur
+Traitement :
+Vérifier que le produit est actif
+Charger données produit
+Charger images actives
+Charger boutons autorisés
+Charger commentaires validés
+Résultat :
+Fiche produit complète
+Boutons visibles selon règles
+🔹 T3 — Téléchargement sécurisé
+Déclencheur :
+E3 – Clic bouton téléchargement
+Acteur :
+Visiteur
+Traitement :
+Vérifier produit actif
+Vérifier fichier actif
+Vérifier autorisation
+Enregistrer action de téléchargement
+Résultat :
+Téléchargement autorisé
+Traçabilité conservée
+🔹 T4 — Soumission commentaire
+Déclencheur :
+E4 – Envoi commentaire
+Acteur :
+Utilisateur
+Traitement :
+Vérifier existence produit
+Enregistrer commentaire
+Statut = en attente
+Résultat :
+Commentaire stocké
+Non visible publiquement
+🔹 T5 — Modération commentaire
+Déclencheur :
+E11 – Action admin
+Acteur :
+Admin
+Traitement :
+Lire commentaire
+Valider / rejeter / supprimer
+Mettre à jour statut
+Résultat :
+Commentaire publié ou supprimé
+🔹 T6 — Envoi message professionnel
+Déclencheur :
+E5 – Soumission formulaire pro
+Acteur :
+Utilisateur
+Traitement :
+Vérifier formulaire complet
+Classer par catégorie
+Enregistrer message
+Résultat :
+Message disponible en admin
+Historique conservé
+🔹 T7 — Connexion admin
+Déclencheur :
+E6 – Tentative de connexion
+Acteur :
+Admin
+Traitement :
+Vérifier identité
+Vérifier statut compte
+Ouvrir session admin
+Résultat :
+Accès zone admin sécurisé
+🔹 T8 — Création / modification produit
+Déclencheur :
+E7 – Action admin
+Acteur :
+Admin
+Traitement :
+Saisir données produit
+Valider cohérence
+Enregistrer ou mettre à jour
+Résultat :
+Produit créé ou modifié
+Impact immédiat ou planifié
+🔹 T9 — Upload fichier (desktop ou mobile)
+Déclencheur :
+E8 – Upload fichier
+Acteur :
+Admin
+Traitement :
+Vérifier format
+Associer au produit
+Définir version
+Définir statut actif/inactif
+Résultat :
+Fichier prêt à diffusion
+🔹 T10 — Gestion images produit
+Déclencheur :
+E9 – Action admin
+Acteur :
+Admin
+Traitement :
+Ajouter / modifier image
+Définir type
+Définir ordre
+Activer / désactiver
+Résultat :
+Rendu visuel maîtrisé
+🔹 T11 — Configuration boutons d’action
+Déclencheur :
+E10 – Action admin
+Acteur :
+Admin
+Traitement :
+Choisir type de bouton
+Définir destination
+Définir règles d’affichage
+Activer / désactiver
+Résultat :
+Comportement produit piloté par données
+🔹 T12 — Activation / désactivation globale
+Déclencheur :
+E12 – Action admin
+Acteur :
+Admin
+Traitement :
+Modifier statut entité
+Propager l’effet sur le site
+Résultat :
+Contenu masqué ou exposé instantanément
+5️⃣ Règles métier transversales
+Aucun contenu inactif n’est visible
+Aucun téléchargement sans traçabilité
+Aucun commentaire sans validation
+Aucun bouton sans règle définie
+L’admin contrôle tout sans modifier le code
+6️⃣ Ce que verrouille le MCT
+✔️ Comportement prévisible
+✔️ Zéro action fantôme
+✔️ Sécurité logique avant technique
+✔️ Cohérence fonctionnelle totale
+✔️ Base propre pour MLT & MPD
+
+Parfait.
+On continue dans l’ordre méthodologique, proprement, sans toucher à ce qui existe déjà.
+Voici UNIQUEMENT le MCC — Modèle Conceptuel de Communication, basé strictement sur ton CCT / CCF existant.
+📘 AR BUSINESS DIGITAL STORE
+MCC — MODÈLE CONCEPTUEL DE COMMUNICATION
+1️⃣ Rôle du MCC
+Le MCC décrit QUI communique avec QUI, et POUR QUOI, sans notion technique.
+👉 Il répond à :
+quels acteurs échangent
+quels types d’informations circulent
+dans quel sens
+à quel moment logique
+❌ Pas de protocole
+❌ Pas d’API
+❌ Pas de JSON
+❌ Pas de SQL
+✔️ Uniquement la logique de communication métier.
+2️⃣ Acteurs du système
+Acteurs humains
+Visiteur public
+Administrateur AR BUSINESS
+Acteurs système
+Site public
+Interface admin
+Système central AR BUSINESS Digital Store (logique métier)
+👉 Le MCC ne descend jamais au niveau technique (serveur, framework).
+3️⃣ Communications côté site public
+🔹 CC1 — Consultation des pages publiques
+Émetteur :
+Visiteur public
+Récepteur :
+Système AR BUSINESS Digital Store
+Information échangée :
+Demande de page
+Demande de contenu public
+Réponse :
+Pages
+Sections visibles
+Contenus autorisés
+🔹 CC2 — Consultation d’un produit
+Émetteur :
+Visiteur public
+Récepteur :
+Système
+Information échangée :
+Demande fiche produit
+Réponse :
+Informations produit
+Images
+Boutons d’action disponibles
+Commentaires validés
+🔹 CC3 — Action via bouton (ex : télécharger)
+Émetteur :
+Visiteur public
+Récepteur :
+Système
+Information échangée :
+Intention d’action (téléchargement / accès / lien)
+Réponse :
+Action autorisée et exécutée
+OU
+Message explicatif (fichier indisponible, statut bloquant)
+🔹 CC4 — Soumission commentaire / note
+Émetteur :
+Visiteur public
+Récepteur :
+Système
+Information échangée :
+Commentaire
+Note
+Produit concerné
+Réponse :
+Confirmation de réception
+Information : validation ultérieure
+🔹 CC5 — Envoi message professionnel
+Émetteur :
+Visiteur public
+Récepteur :
+Système
+Information échangée :
+Message structuré
+Catégorie choisie
+Réponse :
+Accusé de réception
+4️⃣ Communications côté admin
+🔹 CC6 — Connexion admin
+Émetteur :
+Administrateur
+Récepteur :
+Système
+Information échangée :
+Identité
+Preuve d’accès
+Réponse :
+Accès accordé ou refusé
+🔹 CC7 — Gestion produits
+Émetteur :
+Administrateur
+Récepteur :
+Système
+Information échangée :
+Données produit (création / modification / suppression)
+Réponse :
+Confirmation
+Mise à jour visible du catalogue
+🔹 CC8 — Upload fichiers & images
+Émetteur :
+Administrateur (mobile ou desktop)
+Récepteur :
+Système
+Information échangée :
+Fichiers numériques
+Images
+Métadonnées associées
+Réponse :
+Confirmation d’intégration
+Disponibilité conditionnée par statut
+🔹 CC9 — Configuration des boutons
+Émetteur :
+Administrateur
+Récepteur :
+Système
+Information échangée :
+Type de bouton
+Destination
+Règles d’affichage
+Réponse :
+Bouton actif/inactif côté public
+🔹 CC10 — Modération communauté
+Émetteur :
+Administrateur
+Récepteur :
+Système
+Information échangée :
+Décisions de modération
+Réponse :
+Mise à jour visibilité commentaires & notes
+🔹 CC11 — Traitement messages professionnels
+Émetteur :
+Administrateur
+Récepteur :
+Système
+Information échangée :
+Lecture
+Annotation
+Archivage
+Réponse :
+Historique mis à jour
+Statut message modifié
+5️⃣ Communications internes au système
+🔹 CC12 — Synchronisation interne
+Émetteur :
+Système
+Récepteur :
+Système
+Informations échangées :
+Changements de statut
+Mise à jour de visibilité
+Comptage téléchargements
+Logs d’actions
+👉 Invisible pour l’utilisateur, mais essentiel à la cohérence globale.
+6️⃣ Principes fondamentaux du MCC
+✔️ Toute communication est initiée par un acteur identifié
+✔️ Aucun échange direct entre visiteurs
+✔️ L’admin communique uniquement via l’interface admin
+✔️ Le système est le seul médiateur
+✔️ Aucune communication implicite ou cachée
+7️⃣ Position du MCC dans l’ensemble
+Le MCC garantit :
+une séparation claire des responsabilités
+une vision maîtrisée des échanges
+une base saine pour le MLC et le MPD
+
+Parfait.
+On enchaîne logiquement après le MCC, sans revenir en arrière.
+Voici UNIQUEMENT le MLC — Modèle Logique de Communication, aligné à 100 % avec ton MCC + CCT existant.
+📘 AR BUSINESS DIGITAL STORE
+MLC — MODÈLE LOGIQUE DE COMMUNICATION
+1️⃣ Rôle du MLC
+Le MLC traduit le MCC en canaux concrets de communication, sans entrer dans le code.
+👉 Il précise :
+par quels canaux les acteurs communiquent
+quels types de flux circulent
+avec quelles contraintes logiques
+quels niveaux d’accès
+❌ Pas de SQL
+❌ Pas de schéma physique
+❌ Pas d’implémentation technique
+✔️ Logique de flux, de canaux et de sécurisation.
+2️⃣ Canaux de communication identifiés
+Canal
+Description
+Interface Web publique
+Accès visiteurs
+Interface Web admin
+Accès administrateur
+API publique
+Lecture contrôlée
+API privée
+Écriture, upload, modération
+Canal notifications
+Messages système vers utilisateurs
+Canal logs
+Traçabilité interne
+3️⃣ Flux de communication — Site public
+🔹 LC1 — Navigation publique
+Canal :
+Interface Web publique → API publique
+Flux :
+Demande de pages
+Demande catalogue
+Demande fiche produit
+Contraintes logiques :
+Lecture seule
+Contenus filtrés par statut
+Aucune donnée interne exposée
+🔹 LC2 — Actions utilisateur (boutons)
+Canal :
+Interface Web publique → API publique contrôlée
+Flux :
+Intention d’action (téléchargement, accès)
+Traitement logique :
+Vérification statut produit
+Vérification autorisation fichier
+Réponse explicite (autorisé / refusé)
+🔹 LC3 — Soumission commentaire / note
+Canal :
+Interface Web publique → API publique restreinte
+Flux :
+Commentaire
+Note
+Référence produit
+Contraintes :
+Pas de publication directe
+Passage obligatoire en modération
+🔹 LC4 — Message professionnel
+Canal :
+Interface Web publique → API publique sécurisée
+Flux :
+Message structuré
+Catégorie obligatoire
+Contraintes :
+Anti-spam
+Validation de champs
+Stockage sécurisé
+4️⃣ Flux de communication — Zone admin
+🔹 LC5 — Authentification admin
+Canal :
+Interface Admin → API privée
+Flux :
+Identifiants
+Jeton de session
+Contraintes :
+Accès conditionné
+Session limitée dans le temps
+🔹 LC6 — Gestion produits
+Canal :
+Interface Admin → API privée
+Flux :
+Création
+Modification
+Suppression
+Activation / désactivation
+Contraintes :
+Validation systématique
+Journalisation des actions
+🔹 LC7 — Upload fichiers & images
+Canal :
+Interface Admin (mobile / desktop) → API privée
+Flux :
+Fichiers binaires
+Métadonnées
+Contraintes :
+Taille contrôlée
+Type vérifié
+Association obligatoire à un produit
+🔹 LC8 — Configuration boutons & sections
+Canal :
+Interface Admin → API privée
+Flux :
+Paramètres boutons
+Paramètres sections
+Ordonnancement
+Contraintes :
+Aucune modification directe du code
+Tout passe par données configurables
+🔹 LC9 — Modération communauté
+Canal :
+Interface Admin → API privée
+Flux :
+Validation
+Masquage
+Suppression
+Contraintes :
+Historique conservé
+Action réversible si possible
+🔹 LC10 — Traitement messages professionnels
+Canal :
+Interface Admin → API privée
+Flux :
+Lecture
+Annotation
+Archivage
+Contraintes :
+Séparation stricte avec données publiques
+5️⃣ Flux système internes
+🔹 LC11 — Notifications système
+Canal :
+Système → Interface publique
+Flux :
+Mise à jour produit
+Nouvelle version disponible
+Maintenance temporaire
+Contraintes :
+Temps réel ou quasi temps réel
+Non intrusif
+Désactivable si nécessaire
+🔹 LC12 — Logs & audit
+Canal :
+Système → Journal interne
+Flux :
+Connexions
+Actions admin
+Téléchargements
+Modifications critiques
+Contraintes :
+Non modifiable
+Consultable admin uniquement
+6️⃣ Règles logiques transversales
+✔️ Toute écriture passe par API privée
+✔️ Toute lecture publique est filtrée
+✔️ Aucun accès direct base de données
+✔️ Aucun canal mixte public / admin
+✔️ Toute communication est traçable
+7️⃣ Cohérence avec le reste du CCT
+Le MLC :
+applique le MCC
+respecte la structure du système
+prépare directement le MPD (SQL)
+👉 Il garantit que la communication est :
+claire
+contrôlée
+sécurisée
+évolutive 
+
+Parfait, merci pour le verrouillage très clair 🔒
+Je respecte strictement ton MCD + MLD sans aucune extrapolation.
+Ce qui suit est UNIQUEMENT le MPD : traduction physique SQL, propre, professionnelle, alignée, exploitable directement.
+Je pars sur un SQL standard (MySQL / MariaDB / PostgreSQL-compatible), avec :
+clés primaires
+clés étrangères
+contraintes logiques
+types réalistes
+aucune feature en plus
+📘 AR BUSINESS DIGITAL STORE
+MPD — MODÈLE PHYSIQUE DE DONNÉES (SQL)
+1️⃣ Table : UTILISATEUR
+Copier le code
+Sql
+CREATE TABLE utilisateur (
+    id_utilisateur        BIGINT PRIMARY KEY AUTO_INCREMENT,
+    type_utilisateur      VARCHAR(20) NOT NULL CHECK (type_utilisateur IN ('admin', 'visiteur')),
+    nom                   VARCHAR(150) NOT NULL,
+    email                 VARCHAR(150) NOT NULL UNIQUE,
+    mot_de_passe          VARCHAR(255) NOT NULL,
+    statut                VARCHAR(20) NOT NULL DEFAULT 'actif',
+    date_creation         TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    date_derniere_connexion TIMESTAMP NULL
+);
+2️⃣ Table : PRODUIT
+Copier le code
+Sql
+CREATE TABLE produit (
+    id_produit            BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nom_produit           VARCHAR(200) NOT NULL,
+    description_courte    VARCHAR(500),
+    description_longue    TEXT,
+    statut_produit        VARCHAR(30) NOT NULL,
+    actif                 BOOLEAN NOT NULL DEFAULT TRUE,
+    date_creation         TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    date_mise_a_jour      TIMESTAMP NULL,
+    id_utilisateur        BIGINT NOT NULL,
+    CONSTRAINT fk_produit_utilisateur
+        FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+3️⃣ Table : CATEGORIE
+Copier le code
+Sql
+CREATE TABLE categorie (
+    id_categorie          BIGINT PRIMARY KEY AUTO_INCREMENT,
+    nom_categorie         VARCHAR(150) NOT NULL,
+    description           TEXT,
+    actif                 BOOLEAN NOT NULL DEFAULT TRUE
+);
+4️⃣ Table de liaison : PRODUIT_CATEGORIE
+Copier le code
+Sql
+CREATE TABLE produit_categorie (
+    id_produit    BIGINT NOT NULL,
+    id_categorie  BIGINT NOT NULL,
+    PRIMARY KEY (id_produit, id_categorie),
+    CONSTRAINT fk_pc_produit
+        FOREIGN KEY (id_produit) REFERENCES produit(id_produit),
+    CONSTRAINT fk_pc_categorie
+        FOREIGN KEY (id_categorie) REFERENCES categorie(id_categorie)
+);
+5️⃣ Table : FICHIER
+Copier le code
+Sql
+CREATE TABLE fichier (
+    id_fichier            BIGINT PRIMARY KEY AUTO_INCREMENT,
+    type_fichier          VARCHAR(20) NOT NULL,
+    version               VARCHAR(50),
+    taille                BIGINT,
+    chemin_stockage       VARCHAR(500) NOT NULL,
+    source_upload         VARCHAR(20),
+    actif                 BOOLEAN NOT NULL DEFAULT TRUE,
+    date_upload           TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    id_produit            BIGINT NOT NULL,
+    CONSTRAINT fk_fichier_produit
+        FOREIGN KEY (id_produit) REFERENCES produit(id_produit)
+);
+6️⃣ Table : IMAGE
+Copier le code
+Sql
+CREATE TABLE image (
+    id_image              BIGINT PRIMARY KEY AUTO_INCREMENT,
+    type_image            VARCHAR(30) NOT NULL,
+    chemin_image          VARCHAR(500) NOT NULL,
+    ordre_affichage       INT DEFAULT 0,
+    actif                 BOOLEAN NOT NULL DEFAULT TRUE,
+    id_produit            BIGINT NOT NULL,
+    CONSTRAINT fk_image_produit
+        FOREIGN KEY (id_produit) REFERENCES produit(id_produit)
+);
+7️⃣ Table : BOUTON_ACTION
+Copier le code
+Sql
+CREATE TABLE bouton_action (
+    id_bouton             BIGINT PRIMARY KEY AUTO_INCREMENT,
+    type_bouton           VARCHAR(50) NOT NULL,
+    libelle               VARCHAR(150) NOT NULL,
+    destination           VARCHAR(500),
+    regles_affichage      TEXT,
+    actif                 BOOLEAN NOT NULL DEFAULT TRUE,
+    id_produit            BIGINT NOT NULL,
+    CONSTRAINT fk_bouton_produit
+        FOREIGN KEY (id_produit) REFERENCES produit(id_produit)
+);
+8️⃣ Table : COMMENTAIRE
+Copier le code
+Sql
+CREATE TABLE commentaire (
+    id_commentaire        BIGINT PRIMARY KEY AUTO_INCREMENT,
+    contenu               TEXT NOT NULL,
+    note                  INT CHECK (note BETWEEN 1 AND 5),
+    statut                VARCHAR(20) NOT NULL DEFAULT 'en attente',
+    date_creation         TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    id_produit            BIGINT NOT NULL,
+    id_utilisateur        BIGINT NOT NULL,
+    CONSTRAINT fk_commentaire_produit
+        FOREIGN KEY (id_produit) REFERENCES produit(id_produit),
+    CONSTRAINT fk_commentaire_utilisateur
+        FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+9️⃣ Table : MESSAGE_PRO
+Copier le code
+Sql
+CREATE TABLE message_pro (
+    id_message            BIGINT PRIMARY KEY AUTO_INCREMENT,
+    categorie_message     VARCHAR(50) NOT NULL,
+    contenu               TEXT NOT NULL,
+    statut                VARCHAR(20) NOT NULL DEFAULT 'nouveau',
+    date_envoi             TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    id_utilisateur        BIGINT NOT NULL,
+    CONSTRAINT fk_message_utilisateur
+        FOREIGN KEY (id_utilisateur) REFERENCES utilisateur(id_utilisateur)
+);
+🔟 Table : TELECHARGEMENT
+Copier le code
+Sql
+CREATE TABLE telechargement (
+    id_telechargement     BIGINT PRIMARY KEY AUTO_INCREMENT,
+    date_telechargement   TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    source                VARCHAR(100),
+    ip                    VARCHAR(50),
+    user_agent            VARCHAR(255),
+    id_fichier            BIGINT NOT NULL,
+    CONSTRAINT fk_telechargement_fichier
+        FOREIGN KEY (id_fichier) REFERENCES fichier(id_fichier)
+);
+1️⃣1️⃣ Table : SECTION_PAGE
+Copier le code
+Sql
+CREATE TABLE section_page (
+    id_section            BIGINT PRIMARY KEY AUTO_INCREMENT,
+    type_section          VARCHAR(50) NOT NULL,
+    contenu               TEXT,
+    position              INT DEFAULT 0,
+    page                  VARCHAR(100) NOT NULL,
+    actif                 BOOLEAN NOT NULL DEFAULT TRUE
+);
+1️⃣2️⃣ Table de liaison : SECTION_PRODUIT
+Copier le code
+Sql
+CREATE TABLE section_produit (
+    id_section    BIGINT NOT NULL,
+    id_produit    BIGINT NOT NULL,
+    PRIMARY KEY (id_section, id_produit),
+    CONSTRAINT fk_sp_section
+        FOREIGN KEY (id_section) REFERENCES section_page(id_section),
+    CONSTRAINT fk_sp_produit
+        FOREIGN KEY (id_produit) REFERENCES produit(id_produit)
+);
+13️⃣ Garanties du MPD
+✔️ Strictement conforme MCD / MLD
+✔️ Aucune entité ajoutée
+✔️ Aucune logique déplacée au SQL
+✔️ Upload mobile compatible
+✔️ Désactivation logique respectée
+✔️ Prêt pour prod / API / admin
+🔚 État final
+👉 Tu as maintenant l’architecture complète MERISE → SQL, propre, sérieuse, exploitable en équipe et en entreprise.
+
+Parfait, là tu poses la vraie dernière brique sérieuse 🧱
+On sort définitivement de MERISE “académique” pour entrer dans le réel exploitable, avec des choix technologiques clairs, cohérents avec ton projet ET ton niveau actuel (important).
+Je vais être très précis, pragmatique, sans bullshit startup.
+📘 AR BUSINESS DIGITAL STORE
+ARCHITECTURE PHYSIQUE RÉELLE (TECHNOLOGIES & CIRCULATION)
+1️⃣ Principe directeur (important avant les choix)
+On respecte ces contraintes que TU as posées implicitement :
+✔️ Admin mobile
+✔️ Upload fichiers / images
+✔️ JS plutôt que Python (plus simple pour toi)
+✔️ Démarrage gratuit ou quasi gratuit
+✔️ Évolutif sans tout casser
+✔️ Pas une usine à gaz
+👉 Donc : stack simple, robuste, standard
+2️⃣ Choix du SGBD (Base de données)
+❌ Pourquoi PAS MongoDB ici
+Ton modèle est relationnel
+Beaucoup de contraintes (FK, statuts, liaisons)
+Mongo compliquerait inutilement
+❌ Pourquoi PAS SQLite en prod
+OK pour prototype
+Mauvais pour uploads, stats, multi-admin
+✅ CHOIX FINAL : PostgreSQL
+Pourquoi PostgreSQL ?
+✔️ 100 % compatible avec ton MPD
+✔️ Gratuit
+✔️ Très robuste
+✔️ Relations, contraintes, JSON si besoin
+✔️ Standard entreprise
+✔️ Très bien supporté en JS
+3️⃣ Hébergement PostgreSQL (gratuit au départ)
+🔥 OPTION RECOMMANDÉE (réaliste)
+Supabase (PostgreSQL managé)
+PostgreSQL réel (pas une imitation)
+Plan gratuit suffisant pour commencer
+Dashboard admin
+Sauvegardes
+Auth possible plus tard (optionnel)
+Très bien documenté
+👉 Tu peux commencer gratuit, payer plus tard SI et SEULEMENT SI ça grossit.
+Alternatives possibles
+Railway (Postgres)
+Neon.tech (Postgres serverless)
+Mais Supabase est le plus simple pour toi.
+4️⃣ Architecture globale (vue simple)
+Copier le code
+
+[ Frontend Public ]        [ Frontend Admin ]
+        |                         |
+        | HTTP / JSON             | HTTP / JSON
+        |                         |
+        --------> [ API JS ] <---------
+                       |
+                       |
+                [ PostgreSQL ]
+                       |
+                [ Stockage fichiers ]
+5️⃣ Backend / API : TECHNOLOGIE
+✅ Choix : Node.js + Express.js
+Pourquoi ?
+✔️ JavaScript partout
+✔️ Simple
+✔️ Ultra documenté
+✔️ Parfait pour API REST
+✔️ Compatible mobile / web
+👉 Pas besoin de framework lourd (NestJS plus tard si besoin).
+6️⃣ Structure API (très concrète)
+📁 Stack technique
+Node.js
+Express.js
+ORM : Prisma (très important)
+Pourquoi Prisma ?
+Tu pars de TON MPD
+Il génère le code JS
+Sécurise les requêtes
+Évite les erreurs SQL
+Très lisible
+👉 Tu n’écris presque jamais du SQL à la main.
+7️⃣ Exemple de circulation API (réel)
+🔹 Cas : consulter une fiche produit
+Frontend appelle :
+Copier le code
+
+GET /api/products/{id}
+API :
+vérifie produit.actif = true
+récupère :
+produit
+images actives
+boutons actifs
+commentaires validés
+API renvoie :
+Copier le code
+Json
+{
+  "produit": {...},
+  "images": [...],
+  "boutons": [...],
+  "commentaires": [...]
+}
+👉 Aucune logique dans le front
+👉 Tout est contrôlé par les données
+8️⃣ Upload fichiers & images (physique)
+❌ Pas stocker les fichiers dans la DB
+(interdit en pratique)
+✅ Solution
+Stockage objet :
+Supabase Storage
+ou S3 compatible plus tard
+Fonctionnement réel
+Admin upload un fichier (mobile ou desktop)
+API :
+enregistre le fichier dans le storage
+récupère une URL interne
+stocke le chemin dans FICHIER.chemin_stockage
+Le téléchargement passe TOUJOURS par l’API
+👉 Le stockage n’est jamais exposé directement
+9️⃣ Authentification admin (simple au début)
+Phase 1 (recommandée)
+Auth par email / mot de passe
+JWT (token)
+Middleware Express
+Phase 2 (plus tard)
+Supabase Auth
+Rôles avancés
+Logs de session
+🔟 Frontend (sans rentrer trop loin)
+Choix simple
+React (ou Next.js plus tard)
+Responsive full
+Dark / Light mode
+Admin & Public séparés
+👉 Le frontend ne décide jamais 👉 Il affiche ce que l’API autorise
+1️⃣1️⃣ Environnement de départ (concret)
+Stack minimale pour commencer
+Supabase (PostgreSQL + Storage)
+Node.js + Express
+Prisma
+Frontend JS (React ou simple SPA)
+💸 Coût : 0 € au départ
+1️⃣2️⃣ Pourquoi cette architecture est bonne
+✔️ Alignée avec ton MCD / MLD / MPD
+✔️ Facile à apprendre
+✔️ Mobile-friendly
+✔️ Sécurisée par design
+✔️ Évolutive sans refonte
+✔️ Réaliste (pas théorique)
+1️⃣3️⃣ Ce qu’on a maintenant
+👉 Tu as :
+📘 tes cahier de charge CCF CCT CCUI-UX
+📱frontend 
+📐 Modèles MERISE complets
+🗄️ MPD SQL
+🧠 Logique métier verrouillée
+⚙️ Architecture physique réelle
+🚀 Stack technique claire
+

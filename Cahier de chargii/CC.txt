@@ -1,0 +1,1408 @@
+📘 CCF — CAHIER DES CHARGES FONCTIONNEL
+
+AR BUSINESS — DIGITAL STORE
+Plateforme de distribution et vente de produits & services digitaux
+Niveau : Store professionnel — Architecture légère — Base Supabase optimisée
+
+---
+
+1. OBJECTIF DU SYSTÈME
+
+Créer une plateforme Store digital permettant :
+
+- Recherche de produits digitaux
+- Téléchargement sécurisé
+- Distribution par catégories
+- Gestion Free / Freemium / Premium
+- Classement type Store (Top / Récent / Populaire)
+- Expérience fluide mobile & desktop
+- Publicités courtes intégrées (5–10 sec)
+- Gestion admin simple
+- Système léger (sans réseau social / sans communication avancée)
+
+---
+
+2. TYPES DE CONTENU
+
+Produits digitaux
+
+- Applications
+- Logiciels
+- Outils digitaux
+- Fichiers
+- Systèmes / OS
+- Ressources
+
+Services digitaux
+
+- Solutions techniques
+- Services numériques
+- Outils business
+- Systèmes digitaux
+
+---
+
+3. MODÈLES PRODUITS
+
+Chaque produit doit appartenir à :
+
+Licence
+
+- Free
+- Freemium
+- Premium
+
+Type
+
+- Application
+- Logiciel
+- Service
+- Fichier
+- Système
+
+OS compatible
+
+- Android
+- Windows
+- Linux
+- Web
+- Multi-OS
+
+---
+
+4. STRUCTURE FICHE PRODUIT
+
+Chaque produit contient :
+
+- Logo / Image
+- Nom
+- Version
+- Type
+- Catégorie
+- Licence (Free / Freemium / Premium)
+- OS compatible
+- Taille fichier
+- Description courte
+- Description détaillée
+- Screenshots / Images
+- Statut (Stable / Beta / New)
+- Bouton Télécharger
+- Bouton Voir détail
+- Date mise à jour
+- Sécurité vérifiée
+- Signature / Source
+- Produits liés
+- Tags
+
+---
+
+5. INTERACTIONS UTILISATEUR (TYPE STORE PRO)
+
+Navigation
+
+- Scroll fluide
+- Recherche instantanée
+- Filtres dynamiques
+- Catégories cliquables
+- Cartes adaptatives responsive
+
+Consultation produit
+
+Fonctionnement similaire aux grands stores :
+
+- Cliquer carte → ouvre fiche produit
+- Images défilantes
+- Bouton télécharger visible
+- Infos techniques affichées
+- Produits liés suggérés
+- Badge Free / Premium visible
+- Badge OS visible
+
+Téléchargement
+
+- Bouton Télécharger direct
+- Vérification fichier
+- Téléchargement sécurisé
+- Statut fichier affiché
+
+---
+
+6. RECHERCHE AVANCÉE
+
+Filtres disponibles :
+
+- Type produit
+- OS
+- Licence (Free / Freemium / Premium)
+- Version
+- Taille
+- Popularité
+- Date
+- Tags
+
+Recherche dynamique en temps réel.
+
+---
+
+7. CLASSEMENTS STORE
+
+Sections :
+
+- Top Apps
+- Plus récents
+- Populaires
+- Recommandés
+- Premium
+- Outils essentiels
+
+---
+
+8. PUBLICITÉS INTÉGRÉES (ADS)
+
+Caractéristiques :
+
+- Vidéo 5–10 secondes max
+- Non intrusive
+- Placement discret
+- Maximum :
+  - Accueil : 1–2
+  - Fiche produit : 1
+- Gérée par Admin
+- Chargement optimisé
+
+---
+
+9. MESSAGES SYSTÈME
+
+Le système doit afficher :
+
+- Nouveau produit ajouté
+- Mise à jour disponible
+- Fichier vérifié
+- Produit premium
+- Produit indisponible
+- Maintenance
+- Sécurité confirmée
+
+---
+
+10. ADMIN — FONCTIONS
+
+- Ajouter produit
+- Modifier produit
+- Supprimer produit
+- Upload fichier
+- Upload images
+- Gérer catégories
+- Gérer services
+- Gérer licences
+- Gérer Ads
+- Voir statistiques
+- Gérer Premium
+- Gestion sécurité
+
+---
+
+11. FOOTER — ÉLÉMENTS
+
+Sections :
+
+Navigation
+
+- Accueil
+- Store
+- Catégories
+- Premium
+- Services
+- À propos
+
+Produits
+
+- Apps
+- Logiciels
+- Outils
+- Ressources
+
+Support
+
+- Aide
+- Sécurité
+- Conditions
+- Politique
+
+Social
+
+- WhatsApp
+- Facebook Lite
+- TikTok
+- Email
+
+---
+
+12. SYSTÈME RESPONSIVE
+
+- Cartes adaptatives
+- Mobile first
+- Grille dynamique
+- Boutons accessibles
+- Chargement rapide
+- UI fluide
+
+---
+
+13. SÉCURITÉ
+
+- Fichiers vérifiés
+- Téléchargement sécurisé
+- Protection base
+- Pas de communication publique
+- Système léger
+- Anti abus
+
+---
+
+14. IDENTITÉ VISUELLE
+
+Couleurs :
+
+- Noir
+- Or (Primary)
+- Gris tech
+
+Style :
+
+- Pro
+- Moderne
+- Store professionnel
+- Clair & rapide
+
+---
+
+FIN CCF
+
+📗 CCT — CAHIER DES CHARGES TECHNIQUE (1/2)
+
+AR BUSINESS — DIGITAL STORE
+Architecture légère • Store professionnel • React + Supabase • Déploiement Netlify
+
+---
+
+1. ARCHITECTURE GÉNÉRALE
+
+Architecture Semi-Dynamique Optimisée :
+
+Frontend (Client)
+→ React.js + Vite
+→ UI Store responsive
+→ Recherche + filtres
+→ Pages produits
+→ Téléchargement
+
+Backend (BaaS)
+→ Supabase (Database + Storage + Auth léger)
+
+ORM / Data
+→ Prisma (gestion structure base)
+
+Hébergement
+→ Netlify (Frontend + déploiement auto)
+
+Stockage fichiers
+→ Supabase Storage (apps, fichiers, images)
+
+---
+
+2. STACK TECHNOLOGIQUE
+
+Frontend
+
+- React.js
+- Vite
+- TypeScript (recommandé)
+- TailwindCSS (UI rapide)
+- Axios / Fetch
+- React Router
+- Zustand ou Context API (state simple)
+
+Backend (BaaS)
+
+- Supabase Database (PostgreSQL)
+- Supabase Storage (files/images)
+- Supabase Auth (optionnel léger)
+
+ORM
+
+- Prisma
+
+Déploiement
+
+- Netlify (CI/CD auto)
+- GitHub (repo)
+
+---
+
+3. ARBORESCENCE PROJET
+
+Racine
+
+ar-business-store/
+│
+├── public/
+│   ├── logo.png
+│   ├── icons/
+│   └── ads/
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── store/
+│   ├── hooks/
+│   ├── services/
+│   ├── utils/
+│   ├── styles/
+│   └── config/
+│
+├── prisma/
+│   └── schema.prisma
+│
+├── .env
+├── package.json
+├── vite.config.ts
+└── netlify.toml
+
+---
+
+4. STRUCTURE FRONTEND
+
+Pages
+
+pages/
+│
+├── Home.jsx
+├── Store.jsx
+├── Product.jsx
+├── Categories.jsx
+├── Premium.jsx
+├── Services.jsx
+├── Search.jsx
+├── About.jsx
+└── Admin/
+    ├── Dashboard.jsx
+    ├── AddProduct.jsx
+    └── ManageProducts.jsx
+
+---
+
+Components
+
+components/
+│
+├── Navbar.jsx
+├── Footer.jsx
+├── ProductCard.jsx
+├── ProductGrid.jsx
+├── Filters.jsx
+├── SearchBar.jsx
+├── Badge.jsx
+├── AdsPlayer.jsx
+├── Loader.jsx
+└── Pagination.jsx
+
+---
+
+5. CONFIGURATION SUPABASE
+
+Tables principales
+
+- products
+- categories
+- files
+- ads
+- services
+- stats (optionnel)
+
+---
+
+6. SCHÉMA BASE DE DONNÉES (PRISMA)
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  type        String
+  category    String
+  license     String   // Free / Freemium / Premium
+  os          String   // Android / Windows / Linux / Web / Multi
+  version     String
+  size        String
+  image       String
+  fileUrl     String
+  status      String   // Stable / Beta / New
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+---
+
+7. STRUCTURE STORAGE SUPABASE
+
+Buckets :
+
+apps/
+software/
+services/
+files/
+images/
+ads/
+
+Organisation :
+
+apps/app-name/version/file.apk
+images/product-name/cover.png
+ads/ad-01.mp4
+
+---
+
+8. SERVICE API (FRONTEND → SUPABASE)
+
+Exemple fetch produits
+
+import { supabase } from "../config/supabase";
+
+export async function getProducts() {
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .order("createdAt", { ascending: false });
+
+  if (error) throw error;
+  return data;
+}
+
+---
+
+9. COMPOSANT CARTE PRODUIT (RESPONSIVE)
+
+export default function ProductCard({ product }) {
+  return (
+    <div className="bg-zinc-900 rounded-xl p-3 hover:scale-105 transition">
+      <img src={product.image} className="rounded-lg" />
+      <h3 className="text-gold font-semibold">{product.name}</h3>
+      <p className="text-xs text-gray-400">{product.version}</p>
+      <span className="badge">{product.license}</span>
+      <button className="btn-download">Download</button>
+    </div>
+  );
+}
+
+---
+
+10. FILTRES PRODUITS
+
+Filtres dynamiques :
+
+- type
+- OS
+- licence
+- date
+- popularité
+
+Implémentation : Query Supabase + state React.
+
+---
+
+11. ADMIN — UPLOAD PRODUIT
+
+Processus :
+
+1. Upload fichier → Supabase Storage
+2. Upload image
+3. Enregistrer produit → DB
+4. Visible Store instantanément
+
+---
+
+12. NETLIFY CONFIG
+
+netlify.toml
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+Déploiement automatique après push GitHub.
+
+---
+
+13. VARIABLES ENV
+
+VITE_SUPABASE_URL=xxxx
+VITE_SUPABASE_ANON_KEY=xxxx
+DATABASE_URL=postgresql://...
+
+---
+
+FIN PARTIE 1 
+📗 CCT — CAHIER DES CHARGES TECHNIQUE (2/2)
+
+AR BUSINESS — DIGITAL STORE
+Version : Architecture Production Légère • Sécurisée • Optimisée Supabase
+
+---
+
+14. RÈGLES TECHNIQUES GÉNÉRALES
+
+À FAIRE
+
+- Code modulaire (components réutilisables)
+- Structure claire (pages / services / store)
+- Upload fichiers via Admin uniquement
+- Validation des données avant insertion DB
+- Filtres via requêtes optimisées
+- Images compressées
+- Chargement lazy (images / ads)
+- Gestion erreurs API
+- UI responsive mobile-first
+
+À ÉVITER
+
+- Upload direct public
+- Requêtes DB lourdes
+- Trop de relations complexes
+- Stockage inutile
+- Ads intrusives
+- Scripts bloquants
+- Téléchargement non sécurisé
+- Base trop chargée
+
+---
+
+15. SÉCURITÉ
+
+Base Supabase
+
+- RLS activé (Row Level Security)
+- Tables protégées
+- Écriture uniquement via Admin
+- Lecture publique limitée aux produits
+
+Storage
+
+- Fichiers signés (signed URLs)
+- Upload Admin uniquement
+- Extensions contrôlées
+- Scan fichiers avant publication
+
+Frontend
+
+- Pas de clé privée exposée
+- Variables env sécurisées
+- Validation input utilisateur
+- Protection XSS / injection
+
+---
+
+16. PERFORMANCE
+
+Optimisation :
+
+- Pagination produits
+- Lazy loading images
+- Cache requêtes
+- Requêtes filtrées
+- Grid responsive
+- Build Vite optimisé
+- Compression images
+- Ads chargées async
+
+Objectif :
+
+- Chargement < 2 sec
+- Mobile fluide
+- Store rapide
+
+---
+
+17. WORKFLOW MISE À JOUR
+
+Ajouter nouveau produit
+
+1. Upload fichier → Storage
+2. Upload image
+3. Ajouter produit DB
+4. Commit code (si structure change)
+5. Push GitHub
+6. Netlify redéploie
+7. Produit visible
+
+Pas besoin reconstruire site.
+
+---
+
+18. GESTION ADS (5–10 sec)
+
+Structure DB :
+
+ads
+- id
+- title
+- videoUrl
+- position (home / product)
+- active
+
+Règles :
+
+- Max 2 home
+- Max 1 produit
+- Autoplay silencieux
+- Chargement async
+- Non bloquant
+
+---
+
+19. OPTIMISATION SUPABASE (PLAN LÉGER)
+
+Pour éviter surcharge :
+
+- Index sur createdAt
+- Limite produits affichés
+- Pagination
+- Supprimer anciens fichiers
+- Storage organisé
+- Pas de relations lourdes
+- Cache frontend
+
+---
+
+20. TÉLÉCHARGEMENT SÉCURISÉ
+
+Processus :
+
+- Générer signed URL
+- Expiration courte
+- Validation fichier
+- Log téléchargement (optionnel)
+
+---
+
+21. STRUCTURE ADMIN MINIMALE
+
+Fonctions :
+
+- Add product
+- Upload file
+- Upload image
+- Manage categories
+- Manage ads
+- Stats simples
+
+Pas de social / pas de chat.
+
+---
+
+22. BUILD & DÉPLOIEMENT
+
+Process
+
+Dev → GitHub → Netlify → Live
+
+Netlify :
+
+- Build auto
+- Replace ancienne version
+- Même URL
+- Mise à jour instant
+
+---
+
+23. LOGS & MONITORING (OPTIONNEL)
+
+- Stats téléchargements
+- Produits populaires
+- Erreurs API
+- Usage base
+
+---
+
+24. BONNES PRATIQUES
+
+- Toujours compresser images
+- Nettoyer storage
+- Nommer fichiers propre
+- Versionner produits
+- Tester mobile
+- Sauvegarde DB
+- Ne jamais exposer clé service
+
+---
+
+25. ARCHITECTURE FINALE
+
+Frontend :
+React + Vite + Tailwind
+
+Backend :
+Supabase DB + Storage
+
+ORM :
+Prisma
+
+Hosting :
+Netlify
+
+Store :
+Léger • Rapide • Sécurisé • Évolutif
+
+---
+
+FIN CCT
+
+📙 CCUI-UX — CAHIER DES CHARGES UI / UX
+
+AR BUSINESS — DIGITAL STORE
+Style : Store professionnel • Moderne • Dark • Premium • Responsive complet
+
+---
+
+1. IDENTITÉ VISUELLE
+
+Couleurs principales
+
+- Noir profond → Fond principal
+- Or → Couleur primaire (premium / action / identité)
+- Gris foncé → Surfaces / cartes
+- Gris clair → Texte secondaire
+- Blanc → Texte principal
+
+Style
+
+- Professionnel
+- Minimal moderne
+- Fluide
+- Lisible
+- Inspiré Store modernes
+- Mobile-first
+
+---
+
+2. STRUCTURE VISUELLE GLOBALE
+
+Hiérarchie écran :
+
+HEADER / NAVBAR
+↓
+SECTION HERO
+↓
+CATÉGORIES
+↓
+TOP / RÉCENTS / POPULAIRES
+↓
+ADS COURTE (5–10 sec)
+↓
+STORE GRID
+↓
+SERVICES
+↓
+FOOTER
+
+---
+
+3. HEADER / NAVBAR
+
+Éléments :
+
+- Logo (gauche)
+- Nom AR Business
+- Barre recherche centrale
+- Icône filtres
+- Bouton Premium
+- Menu mobile (☰)
+
+Mobile :
+
+- Menu slide
+- Barre recherche visible
+
+---
+
+4. HERO SECTION
+
+Contenu :
+
+- Titre : Digital Store Platform
+- Sous-titre
+- Barre recherche large
+- Boutons :
+  - Explorer Store
+  - Premium
+  - Services
+
+Fond sombre + glow or discret.
+
+---
+
+5. CATÉGORIES VISUELLES
+
+Cartes horizontales scrollables :
+
+- Apps
+- Logiciels
+- Outils
+- Services
+- OS
+- Ressources
+
+Interaction :
+Tap → ouvre catégorie.
+
+---
+
+6. STORE GRID (CARTES PRODUITS)
+
+Responsive
+
+Desktop :
+4 colonnes
+Tablet :
+2 colonnes
+Mobile :
+1 colonne
+
+Carte produit
+
+Structure :
+
+- Image / Icon
+- Nom
+- Version
+- Badge licence :
+  - Free (gris)
+  - Freemium (or)
+  - Premium (or glow)
+- Badge OS
+- Taille
+- Bouton Télécharger
+- Bouton Détails
+
+Hover :
+
+- Glow or
+- Scale léger
+- Ombre
+
+Mobile :
+
+- Tap → ouvre fiche produit
+
+---
+
+7. LISTES STORE
+
+Sections :
+
+- Top Apps
+- Plus récents
+- Populaires
+- Recommandés
+- Premium
+
+Format :
+Scroll horizontal cartes.
+
+---
+
+8. PAGE PRODUIT (DETAIL)
+
+Structure verticale :
+
+Header produit
+
+- Icon
+- Nom
+- Version
+- Licence badge
+- OS badge
+
+Screenshots
+
+Slider horizontal swipe.
+
+Description
+
+Courte + complète.
+
+Infos techniques
+
+- Taille
+- Version
+- Sécurité
+- Signature
+- Date update
+
+Boutons
+
+- Télécharger (principal)
+- Premium (si payant)
+
+Produits similaires
+
+Grid horizontal.
+
+Mini Ads (5–10 sec)
+
+---
+
+9. RECHERCHE & FILTRES
+
+Barre intelligente :
+
+Recherche instant.
+
+Filtres :
+
+- Type
+- OS
+- Licence (Free / Freemium / Premium)
+- Version
+- Taille
+- Popularité
+- Date
+
+UI :
+Drawer mobile / sidebar desktop.
+
+---
+
+10. ADS (UI)
+
+Format :
+
+- Vidéo 5–10 sec
+- Rectangle discret
+- Auto play mute
+- Non bloquant
+- Fermeture possible
+
+Placement :
+
+- Accueil
+- Fiche produit
+
+---
+
+11. SERVICES PAGE
+
+Cartes verticales :
+
+- Nom service
+- Description
+- Bouton Demande
+
+Style pro.
+
+---
+
+12. PREMIUM SECTION
+
+Design Or accentué :
+
+- Glow
+- Cartes premium
+- Badges
+- Style exclusif
+
+---
+
+13. FOOTER
+
+Colonnes :
+
+Navigation
+
+Accueil / Store / Premium / Services / About
+
+Produits
+
+Apps / Logiciels / Outils / Ressources
+
+Support
+
+Aide / Sécurité / Conditions
+
+Social
+
+WhatsApp / Facebook Lite / TikTok / Email
+
+Fond noir + texte gris.
+
+---
+
+14. RESPONSIVE
+
+Mobile-First :
+
+- Cartes adaptatives
+- Boutons accessibles
+- Scroll fluide
+- Images optimisées
+- Grilles dynamiques
+
+---
+
+15. INTERACTIONS UX
+
+- Navigation fluide
+- Tap rapide
+- Chargement progressif
+- Skeleton loader
+- Feedback bouton
+- Messages système
+- Téléchargement clair
+- Badges visibles
+- Expérience simple
+
+---
+
+16. DESIGN CARTES — DIMENSIONS
+
+Desktop :
+~260px largeur
+
+Tablet :
+~45%
+
+Mobile :
+100%
+
+Ratio image :
+1:1 ou 4:3
+
+---
+
+17. EXPÉRIENCE UTILISATEUR
+
+Objectifs :
+
+- Trouver produit rapidement
+- Comprendre licence
+- Télécharger facilement
+- Naviguer fluide
+- UI propre
+- Pas de surcharge
+- Store pro
+
+---
+
+FIN CCUI-UX 
+
+📘 EXTENSION — SYSTÈME ADMIN AVANCÉ
+
+AR BUSINESS — DIGITAL STORE
+Niveau : Administration sécurisée • Invisible public • Optimisation base • Protection moderne
+
+---
+
+1. VISIBILITÉ ADMIN (ZONE PRIVÉE INVISIBLE)
+
+Principe
+
+La zone Admin n’existe pas pour les visiteurs.
+
+Elle doit être :
+
+- Protégée par Auth
+- Non indexée (robots.txt)
+- URL privée
+- Accessible seulement Admin
+- Données protégées par RLS
+
+Méthodes utilisées (standard pro)
+
+- Auth Supabase (role admin)
+- Middleware protection route
+- Vérification token session
+- Redirection si non autorisé
+- Pages Admin non exposées public
+
+Exemple logique
+
+/admin → vérifie session
+si user.role !== admin → redirect home
+sinon → accès autorisé
+
+---
+
+2. MODULES ADMIN AVANCÉS
+
+Gestion Produits
+
+- Ajouter / Modifier / Supprimer
+- Upload fichiers
+- Upload images
+- Versionning
+- Activation / Désactivation
+
+Gestion Base
+
+- Nettoyage automatique
+- Purge données inutiles
+- Compression historique
+- Suppression fichiers orphelins
+
+Gestion Ads
+
+- Ajouter / Supprimer
+- Activer / Désactiver
+- Position (home / product)
+
+Sécurité
+
+- Surveillance accès
+- Logs actions admin
+- Protection brute-force
+- Vérification fichiers
+
+Monitoring
+
+- Activité système
+- Erreurs API
+- Téléchargements
+- Produits actifs
+
+---
+
+3. MISE À JOUR TEMPS RÉEL
+
+Utilisation : Supabase Realtime
+
+Fonctions :
+
+- Nouveau produit → visible instant
+- Produit modifié → refresh auto
+- Produit supprimé → retiré auto
+- Stats mises à jour
+- Admin panel live
+
+Optimisation :
+
+- Realtime seulement admin + produits
+- Pas sur toute la DB
+- Limiter events
+
+---
+
+4. PURGE & OPTIMISATION BASE (SYSTÈME AUTO)
+
+Objectif
+
+Garder base légère + rapide + stable.
+
+Automatisations recommandées
+
+Historique léger
+
+- Supprimer logs anciens > X jours
+- Compresser stats
+- Nettoyer cache
+
+Fichiers
+
+- Supprimer fichiers non liés produit
+- Supprimer versions obsolètes
+- Nettoyer uploads cassés
+
+Données
+
+- Supprimer produits supprimés définitivement
+- Nettoyer tables temporaires
+- Index DB optimisés
+
+Fréquence
+
+- Quotidien (léger)
+- Hebdomadaire (complet)
+
+---
+
+5. SYSTÈME LOG — OBLIGATOIRE (MINIMAL PRO)
+
+Oui, même léger, il faut un minimum log système.
+
+Pourquoi
+
+- Sécurité
+- Debug
+- Surveillance
+- Détection abus
+
+Logs minimum
+
+Sécurité
+
+- Connexion admin
+- Tentatives refusées
+- Actions critiques (delete / purge)
+
+Système
+
+- Upload fichier
+- Erreur API
+- Téléchargement
+- Update produit
+
+Base
+
+- Purge
+- Nettoyage
+- Suppression
+
+Stockage
+
+Table : "system_logs"
+
+Structure :
+
+id
+type (security / system / db)
+action
+user
+timestamp
+
+Purge auto > 30 jours.
+
+---
+
+6. SÉCURITÉ MODERNE (ADAPTÉE AUX RISQUES ACTUELS)
+
+Protection accès
+
+- RLS activé
+- Admin role isolé
+- JWT vérifié
+- Rate limit login
+- Session sécurisée
+
+Protection fichiers
+
+- Scan upload
+- Extensions contrôlées
+- Signed URL
+- Expiration courte
+
+Protection API
+
+- Validation input
+- Anti injection
+- Anti spam
+- Headers sécurisés
+
+Frontend
+
+- Pas de clés privées
+- Env sécurisé
+- Protection XSS
+- Filtrage input
+
+---
+
+7. SUPPRESSION SÉCURISÉE (DELETE SAFE)
+
+Quand Admin supprime :
+
+1. Marquer supprimé (soft delete)
+2. Retirer du Store
+3. Supprimer fichier storage
+4. Nettoyer DB
+5. Log action
+
+---
+
+8. ALLÈGEMENT AUTOMATIQUE DONNÉES
+
+Optimisations :
+
+- Pagination produits
+- Cache frontend
+- Images compressées
+- Index DB
+- Limite requêtes
+- Storage organisé
+
+---
+
+9. ADMIN UI / UX (PARTIE VISUELLE)
+
+Zone Admin doit inclure :
+
+Dashboard
+
+- Produits actifs
+- Téléchargements
+- Activité
+- Alertes sécurité
+
+Gestion Produits
+
+- Table filtrable
+- Edit rapide
+- Upload direct
+
+Base & Système
+
+- Bouton purge
+- Logs viewer
+- Nettoyage
+
+Sécurité
+
+- Tentatives accès
+- Actions admin
+- Alertes
+
+Design :
+
+- Dark
+- Minimal
+- Clair
+- Rapide
+- Mobile utilisable
+
+---
+
+10. CE QUE FONT LES SITES PRO (RÉSUMÉ)
+
+Les plateformes pro :
+
+- Zone admin invisible public
+- Logs toujours actifs
+- Nettoyage auto base
+- Sécurité multi-niveaux
+- Upload contrôlé
+- Realtime partiel
+- Soft delete
+- Monitoring
+- Optimisation continue
+
+---
+
+11. NIVEAU DE TON SYSTÈME
+
+Avec ce plan :
+
+- Store léger ✔
+- Admin sécurisé ✔
+- Base optimisée ✔
+- Logs minimum pro ✔
+- Protection moderne ✔
+- Supabase safe ✔
+- Évolutif ✔
+
+---
+
+FIN — EXTENSION ADMIN AVANCÉE

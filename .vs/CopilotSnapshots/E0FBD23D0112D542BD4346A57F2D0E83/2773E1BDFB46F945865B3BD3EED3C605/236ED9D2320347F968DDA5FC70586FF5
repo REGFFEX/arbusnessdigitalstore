@@ -1,0 +1,23 @@
+﻿import { supabase } from '../config/supabase'
+
+export async function getSignedDownloadUrl(bucket: string, path: string, expiresIn = 60) {
+  const { data, error } = await supabase.storage.from(bucket).createSignedUrl(path, expiresIn)
+  if (error) throw error
+  return data.signedUrl
+}
+
+export async function logDownload(productId: string, userId?: string) {
+  try {
+    let uid = userId
+    if (!uid) {
+      const { data } = await supabase.auth.getUser()
+      uid = data.user?.id ?? undefined
+    }
+    const payload = { type: 'download', action: `download:${productId}`, user: uid ?? null }
+    // insert into system_logs table
+    const { error } = await supabase.from('system_logs').insert([payload])
+    if (error) console.error('log error', error)
+  } catch (err) {
+    console.error('logDownload error', err)
+  }
+}

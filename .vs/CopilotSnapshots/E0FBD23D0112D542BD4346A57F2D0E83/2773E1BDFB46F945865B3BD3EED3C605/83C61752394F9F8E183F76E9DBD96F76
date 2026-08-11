@@ -1,0 +1,25 @@
+﻿import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { getProductById } from '../services/products'
+
+export default function ProductPage() {
+  const { id } = useParams()
+  const [product, setProduct] = useState<any | null>(null)
+
+  useEffect(() => {
+    if (!id) return
+    getProductById(id)
+      .then((p) => setProduct(p))
+      .catch((e) => console.error(e))
+  }, [id])
+
+  if (!product) return <div className="p-6">Product not found</div>
+
+  return (
+    <div className="p-6">
+      <h1 className="text-2xl">{product.name}</h1>
+      <p className="text-gray-400">{product.version}</p>
+      <p className="mt-4">{product.description}</p>
+    </div>
+  )
+}

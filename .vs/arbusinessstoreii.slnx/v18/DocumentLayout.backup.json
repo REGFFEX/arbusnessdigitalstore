@@ -1,0 +1,629 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.env||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.env||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\downloads_setup.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sql\\downloads_setup.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\rules_rls.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sql\\rules_rls.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\rls_policies.sql||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sql\\rls_policies.sql||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\prismaProducts.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\prismaProducts.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\ManageAds.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin\\ManageAds.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\downloads.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\downloads.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\postcss.config.cjs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:postcss.config.cjs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\vite.config.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:vite.config.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\netlify.toml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:netlify.toml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.env.example||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.env.example||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:prisma\\schema.prisma||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\config\\supabase.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\config\\supabase.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\main.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\app\\App.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\app\\App.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Home.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Home.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Store.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Store.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Product.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Product.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\Dashboard.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin\\Dashboard.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProductCard.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\ProductCard.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProductGrid.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\ProductGrid.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\products.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\products.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\styles\\tailwind.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\styles\\tailwind.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\AdsPlayer.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\AdsPlayer.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\tailwind.config.cjs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tailwind.config.cjs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\hooks\\useAuth.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\hooks\\useAuth.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProtectedRoute.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\ProtectedRoute.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\Login.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin\\Login.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\admin.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\services\\admin.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\AddProduct.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin\\AddProduct.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\ManageProducts.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin\\ManageProducts.tsx||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\prisma\\seed.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:prisma\\seed.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\utils\\prismaClient.ts||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\utils\\prismaClient.ts||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "rls_policies.sql",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\rls_policies.sql",
+              "RelativeDocumentMoniker": "sql\\rls_policies.sql",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\rls_policies.sql",
+              "RelativeToolTip": "sql\\rls_policies.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-17T22:18:49.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".env",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.env",
+              "RelativeDocumentMoniker": ".env",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.env",
+              "RelativeToolTip": ".env",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T13:29:51.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ManageAds.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\ManageAds.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Admin\\ManageAds.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\ManageAds.tsx",
+              "RelativeToolTip": "src\\pages\\Admin\\ManageAds.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:30:35.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "downloads_setup.sql",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\downloads_setup.sql",
+              "RelativeDocumentMoniker": "sql\\downloads_setup.sql",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\downloads_setup.sql",
+              "RelativeToolTip": "sql\\downloads_setup.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-17T13:29:32.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "downloads.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\downloads.ts",
+              "RelativeDocumentMoniker": "src\\services\\downloads.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\downloads.ts",
+              "RelativeToolTip": "src\\services\\downloads.ts",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAgwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:29:15.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "rules_rls.sql",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\rules_rls.sql",
+              "RelativeDocumentMoniker": "sql\\rules_rls.sql",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\sql\\rules_rls.sql",
+              "RelativeToolTip": "sql\\rules_rls.sql",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-17T13:29:09.07Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "package.json",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\package.json",
+              "RelativeDocumentMoniker": "package.json",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\package.json",
+              "RelativeToolTip": "package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-17T12:25:01.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "prismaProducts.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\prismaProducts.ts",
+              "RelativeDocumentMoniker": "src\\services\\prismaProducts.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\prismaProducts.ts",
+              "RelativeToolTip": "src\\services\\prismaProducts.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:38:47.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "postcss.config.cjs",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\postcss.config.cjs",
+              "RelativeDocumentMoniker": "postcss.config.cjs",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\postcss.config.cjs",
+              "RelativeToolTip": "postcss.config.cjs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-17T12:31:22.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\tsconfig.json",
+              "RelativeDocumentMoniker": "tsconfig.json",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\tsconfig.json",
+              "RelativeToolTip": "tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-17T13:39:20.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "prismaClient.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\utils\\prismaClient.ts",
+              "RelativeDocumentMoniker": "src\\utils\\prismaClient.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\utils\\prismaClient.ts",
+              "RelativeToolTip": "src\\utils\\prismaClient.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:38:38.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "seed.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\prisma\\seed.ts",
+              "RelativeDocumentMoniker": "prisma\\seed.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\prisma\\seed.ts",
+              "RelativeToolTip": "prisma\\seed.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:38:18.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\vite.config.ts",
+              "RelativeDocumentMoniker": "vite.config.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\vite.config.ts",
+              "RelativeToolTip": "vite.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:25:26.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "netlify.toml",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\netlify.toml",
+              "RelativeDocumentMoniker": "netlify.toml",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\netlify.toml",
+              "RelativeToolTip": "netlify.toml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T12:25:31.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": ".env.example",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.env.example",
+              "RelativeDocumentMoniker": ".env.example",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.env.example",
+              "RelativeToolTip": ".env.example",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T12:25:34.447Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "schema.prisma",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\prisma\\schema.prisma",
+              "RelativeDocumentMoniker": "prisma\\schema.prisma",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\prisma\\schema.prisma",
+              "RelativeToolTip": "prisma\\schema.prisma",
+              "ViewState": "AgIAAAgAAAAAAAAAAABRwEkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T12:25:41.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "supabase.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\config\\supabase.ts",
+              "RelativeDocumentMoniker": "src\\config\\supabase.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\config\\supabase.ts",
+              "RelativeToolTip": "src\\config\\supabase.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:25:44.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "main.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\main.tsx",
+              "RelativeDocumentMoniker": "src\\main.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\main.tsx",
+              "RelativeToolTip": "src\\main.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:25:48.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ManageProducts.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\ManageProducts.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Admin\\ManageProducts.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\ManageProducts.tsx",
+              "RelativeToolTip": "src\\pages\\Admin\\ManageProducts.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:06:08.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AddProduct.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\AddProduct.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Admin\\AddProduct.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\AddProduct.tsx",
+              "RelativeToolTip": "src\\pages\\Admin\\AddProduct.tsx",
+              "ViewState": "AgIAAEgAAAAAAAAAAIBJwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:06:00.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "admin.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\admin.ts",
+              "RelativeDocumentMoniker": "src\\services\\admin.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\admin.ts",
+              "RelativeToolTip": "src\\services\\admin.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:05:51.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Login.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\Login.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Admin\\Login.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\Login.tsx",
+              "RelativeToolTip": "src\\pages\\Admin\\Login.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:00:30.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProtectedRoute.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProtectedRoute.tsx",
+              "RelativeDocumentMoniker": "src\\components\\ProtectedRoute.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProtectedRoute.tsx",
+              "RelativeToolTip": "src\\components\\ProtectedRoute.tsx",
+              "ViewState": "AgIAAAoAAAAAAAAAAIBJwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:00:25.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "useAuth.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\hooks\\useAuth.tsx",
+              "RelativeDocumentMoniker": "src\\hooks\\useAuth.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\hooks\\useAuth.tsx",
+              "RelativeToolTip": "src\\hooks\\useAuth.tsx",
+              "ViewState": "AgIAAD4AAAAAAAAAAIBJwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T13:00:22.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": ".gitignore",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF8SURBVDhPjVNLTgJBEG1lwpoFB3GNK9fieA48hD8iwT/ihwgSDAIHgAGXXsEV18CNzL/LquqZdsYM6kteXqcy3fWqpmpNRBgOhyABBEgpAFVKPIMUcYzUyOU\u002BXM/b2qtU3vkSfRjjZTCAMAw1A2LwzdFoBPP5HNqdzuL27n4juibWI\u002BUshBA1DIkhEx9iEorFotgslQqGYbxxAGFEqt1MxmPWJLbLZdZ\u002Bv89q5PMFPiTR6z2zdaxR0fXA0XTBcVywkb4fwHXjRteecIDNQ7UmExVYAdPcxYaqclN46na5WenMKjtlVnTYwcXlVYaDqImW9beD5N/TeGy32QHXm6hZ03ZgiSQHp2fnWQ4oBmJqWSqwAqZpZjt4aLXAD4J0VqyZsmoubfB8H2r1eoaD6NXZ9HcHO\u002BSA3f4AjifXl8rItOETM8ckB9WTWpYD9RdeZ1PWVWAHWXPQaDb59f/w8LiqHeh1pvGkCaP6qB8yXusoxmuNZ7XmII4O9vGuEF86osuDYRkpYQAAAABJRU5ErkJggg==",
+              "WhenOpened": "2026-02-17T12:31:25.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "tailwind.config.cjs",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\tailwind.config.cjs",
+              "RelativeDocumentMoniker": "tailwind.config.cjs",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\tailwind.config.cjs",
+              "RelativeToolTip": "tailwind.config.cjs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-17T12:31:20.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "README.md",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAACMAAAAAAAAAAABBwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-02-17T12:26:50.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdsPlayer.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\AdsPlayer.tsx",
+              "RelativeDocumentMoniker": "src\\components\\AdsPlayer.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\AdsPlayer.tsx",
+              "RelativeToolTip": "src\\components\\AdsPlayer.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:47.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "tailwind.css",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\styles\\tailwind.css",
+              "RelativeDocumentMoniker": "src\\styles\\tailwind.css",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\styles\\tailwind.css",
+              "RelativeToolTip": "src\\styles\\tailwind.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-17T12:26:41.996Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "products.ts",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\products.ts",
+              "RelativeDocumentMoniker": "src\\services\\products.ts",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\services\\products.ts",
+              "RelativeToolTip": "src\\services\\products.ts",
+              "ViewState": "AgIAABgAAAAAAAAAAIBJwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:35.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductGrid.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProductGrid.tsx",
+              "RelativeDocumentMoniker": "src\\components\\ProductGrid.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProductGrid.tsx",
+              "RelativeToolTip": "src\\components\\ProductGrid.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:30.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProductCard.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProductCard.tsx",
+              "RelativeDocumentMoniker": "src\\components\\ProductCard.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\components\\ProductCard.tsx",
+              "RelativeToolTip": "src\\components\\ProductCard.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:25.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Dashboard.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\Dashboard.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Admin\\Dashboard.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Admin\\Dashboard.tsx",
+              "RelativeToolTip": "src\\pages\\Admin\\Dashboard.tsx",
+              "ViewState": "AgIAABcAAAAAAAAAAIBJwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:20.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Product.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Product.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Product.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Product.tsx",
+              "RelativeToolTip": "src\\pages\\Product.tsx",
+              "ViewState": "AgIAAAMAAAAAAAAAAABBwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:16.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Store.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Store.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Store.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Store.tsx",
+              "RelativeToolTip": "src\\pages\\Store.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:10.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Home.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Home.tsx",
+              "RelativeDocumentMoniker": "src\\pages\\Home.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\pages\\Home.tsx",
+              "RelativeToolTip": "src\\pages\\Home.tsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:26:05.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.tsx",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\app\\App.tsx",
+              "RelativeDocumentMoniker": "src\\app\\App.tsx",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\src\\app\\App.tsx",
+              "RelativeToolTip": "src\\app\\App.tsx",
+              "ViewState": "AgIAACIAAAAAAAAAAIBJwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T12:25:58.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "index.html",
+              "DocumentMoniker": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "F:\\Projet informatique\\1 Projet AR BUSINESS\\cahier de charge\\p\u00F4le\\arbusinessstoreii\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-17T12:25:52.293Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,484 @@
+
+📗 CCT — CAHIER DES CHARGES TECHNIQUE (1/2)
+
+AR BUSINESS — DIGITAL STORE
+Architecture légère • Store professionnel • React + Supabase • Déploiement Netlify
+
+---
+
+1. ARCHITECTURE GÉNÉRALE
+
+Architecture Semi-Dynamique Optimisée :
+
+Frontend (Client)
+→ React.js + Vite
+→ UI Store responsive
+→ Recherche + filtres
+→ Pages produits
+→ Téléchargement
+
+Backend (BaaS)
+→ Supabase (Database + Storage + Auth léger)
+
+ORM / Data
+→ Prisma (gestion structure base)
+
+Hébergement
+→ Netlify (Frontend + déploiement auto)
+
+Stockage fichiers
+→ Supabase Storage (apps, fichiers, images)
+
+---
+
+2. STACK TECHNOLOGIQUE
+
+Frontend
+
+- React.js
+- Vite
+- TypeScript (recommandé)
+- TailwindCSS (UI rapide)
+- Axios / Fetch
+- React Router
+- Zustand ou Context API (state simple)
+
+Backend (BaaS)
+
+- Supabase Database (PostgreSQL)
+- Supabase Storage (files/images)
+- Supabase Auth (optionnel léger)
+
+ORM
+
+- Prisma
+
+Déploiement
+
+- Netlify (CI/CD auto)
+- GitHub (repo)
+
+---
+
+3. ARBORESCENCE PROJET
+
+Racine
+
+ar-business-store/
+│
+├── public/
+│   ├── logo.png
+│   ├── icons/
+│   └── ads/
+│
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── store/
+│   ├── hooks/
+│   ├── services/
+│   ├── utils/
+│   ├── styles/
+│   └── config/
+│
+├── prisma/
+│   └── schema.prisma
+│
+├── .env
+├── package.json
+├── vite.config.ts
+└── netlify.toml
+
+---
+
+4. STRUCTURE FRONTEND
+
+Pages
+
+pages/
+│
+├── Home.jsx
+├── Store.jsx
+├── Product.jsx
+├── Categories.jsx
+├── Premium.jsx
+├── Services.jsx
+├── Search.jsx
+├── About.jsx
+└── Admin/
+    ├── Dashboard.jsx
+    ├── AddProduct.jsx
+    └── ManageProducts.jsx
+
+---
+
+Components
+
+components/
+│
+├── Navbar.jsx
+├── Footer.jsx
+├── ProductCard.jsx
+├── ProductGrid.jsx
+├── Filters.jsx
+├── SearchBar.jsx
+├── Badge.jsx
+├── AdsPlayer.jsx
+├── Loader.jsx
+└── Pagination.jsx
+
+---
+
+5. CONFIGURATION SUPABASE
+
+Tables principales
+
+- products
+- categories
+- files
+- ads
+- services
+- stats (optionnel)
+
+---
+
+6. SCHÉMA BASE DE DONNÉES (PRISMA)
+
+model Product {
+  id          String   @id @default(uuid())
+  name        String
+  description String
+  type        String
+  category    String
+  license     String   // Free / Freemium / Premium
+  os          String   // Android / Windows / Linux / Web / Multi
+  version     String
+  size        String
+  image       String
+  fileUrl     String
+  status      String   // Stable / Beta / New
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+---
+
+7. STRUCTURE STORAGE SUPABASE
+
+Buckets :
+
+apps/
+software/
+services/
+files/
+images/
+ads/
+
+Organisation :
+
+apps/app-name/version/file.apk
+images/product-name/cover.png
+ads/ad-01.mp4
+
+---
+
+8. SERVICE API (FRONTEND → SUPABASE)
+
+Exemple fetch produits
+
+import { supabase } from "../config/supabase";
+
+export async function getProducts() {
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .order("createdAt", { ascending: false });
+
+  if (error) throw error;
+  return data;
+}
+
+---
+
+9. COMPOSANT CARTE PRODUIT (RESPONSIVE)
+
+export default function ProductCard({ product }) {
+  return (
+    <div className="bg-zinc-900 rounded-xl p-3 hover:scale-105 transition">
+      <img src={product.image} className="rounded-lg" />
+      <h3 className="text-gold font-semibold">{product.name}</h3>
+      <p className="text-xs text-gray-400">{product.version}</p>
+      <span className="badge">{product.license}</span>
+      <button className="btn-download">Download</button>
+    </div>
+  );
+}
+
+---
+
+10. FILTRES PRODUITS
+
+Filtres dynamiques :
+
+- type
+- OS
+- licence
+- date
+- popularité
+
+Implémentation : Query Supabase + state React.
+
+---
+
+11. ADMIN — UPLOAD PRODUIT
+
+Processus :
+
+1. Upload fichier → Supabase Storage
+2. Upload image
+3. Enregistrer produit → DB
+4. Visible Store instantanément
+
+---
+
+12. NETLIFY CONFIG
+
+netlify.toml
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+Déploiement automatique après push GitHub.
+
+---
+
+13. VARIABLES ENV
+
+VITE_SUPABASE_URL=xxxx
+VITE_SUPABASE_ANON_KEY=xxxx
+DATABASE_URL=postgresql://...
+
+---
+
+FIN PARTIE 1
+
+📗 CCT — CAHIER DES CHARGES TECHNIQUE (2/2)
+
+AR BUSINESS — DIGITAL STORE
+Version : Architecture Production Légère • Sécurisée • Optimisée Supabase
+
+---
+
+14. RÈGLES TECHNIQUES GÉNÉRALES
+
+À FAIRE
+
+- Code modulaire (components réutilisables)
+- Structure claire (pages / services / store)
+- Upload fichiers via Admin uniquement
+- Validation des données avant insertion DB
+- Filtres via requêtes optimisées
+- Images compressées
+- Chargement lazy (images / ads)
+- Gestion erreurs API
+- UI responsive mobile-first
+
+À ÉVITER
+
+- Upload direct public
+- Requêtes DB lourdes
+- Trop de relations complexes
+- Stockage inutile
+- Ads intrusives
+- Scripts bloquants
+- Téléchargement non sécurisé
+- Base trop chargée
+
+---
+
+15. SÉCURITÉ
+
+Base Supabase
+
+- RLS activé (Row Level Security)
+- Tables protégées
+- Écriture uniquement via Admin
+- Lecture publique limitée aux produits
+
+Storage
+
+- Fichiers signés (signed URLs)
+- Upload Admin uniquement
+- Extensions contrôlées
+- Scan fichiers avant publication
+
+Frontend
+
+- Pas de clé privée exposée
+- Variables env sécurisées
+- Validation input utilisateur
+- Protection XSS / injection
+
+---
+
+16. PERFORMANCE
+
+Optimisation :
+
+- Pagination produits
+- Lazy loading images
+- Cache requêtes
+- Requêtes filtrées
+- Grid responsive
+- Build Vite optimisé
+- Compression images
+- Ads chargées async
+
+Objectif :
+
+- Chargement < 2 sec
+- Mobile fluide
+- Store rapide
+
+---
+
+17. WORKFLOW MISE À JOUR
+
+Ajouter nouveau produit
+
+1. Upload fichier → Storage
+2. Upload image
+3. Ajouter produit DB
+4. Commit code (si structure change)
+5. Push GitHub
+6. Netlify redéploie
+7. Produit visible
+
+Pas besoin reconstruire site.
+
+---
+
+18. GESTION ADS (5–10 sec)
+
+Structure DB :
+
+ads
+- id
+- title
+- videoUrl
+- position (home / product)
+- active
+
+Règles :
+
+- Max 2 home
+- Max 1 produit
+- Autoplay silencieux
+- Chargement async
+- Non bloquant
+
+---
+
+19. OPTIMISATION SUPABASE (PLAN LÉGER)
+
+Pour éviter surcharge :
+
+- Index sur createdAt
+- Limite produits affichés
+- Pagination
+- Supprimer anciens fichiers
+- Storage organisé
+- Pas de relations lourdes
+- Cache frontend
+
+---
+
+20. TÉLÉCHARGEMENT SÉCURISÉ
+
+Processus :
+
+- Générer signed URL
+- Expiration courte
+- Validation fichier
+- Log téléchargement (optionnel)
+
+---
+
+21. STRUCTURE ADMIN MINIMALE
+
+Fonctions :
+
+- Add product
+- Upload file
+- Upload image
+- Manage categories
+- Manage ads
+- Stats simples
+
+Pas de social / pas de chat.
+
+---
+
+22. BUILD & DÉPLOIEMENT
+
+Process
+
+Dev → GitHub → Netlify → Live
+
+Netlify :
+
+- Build auto
+- Replace ancienne version
+- Même URL
+- Mise à jour instant
+
+---
+
+23. LOGS & MONITORING (OPTIONNEL)
+
+- Stats téléchargements
+- Produits populaires
+- Erreurs API
+- Usage base
+
+---
+
+24. BONNES PRATIQUES
+
+- Toujours compresser images
+- Nettoyer storage
+- Nommer fichiers propre
+- Versionner produits
+- Tester mobile
+- Sauvegarde DB
+- Ne jamais exposer clé service
+
+---
+
+25. ARCHITECTURE FINALE
+
+Frontend :
+React + Vite + Tailwind
+
+Backend :
+Supabase DB + Storage
+
+ORM :
+Prisma
+
+Hosting :
+Netlify
+
+Store :
+Léger • Rapide • Sécurisé • Évolutif
+
+---
+
+FIN CCT
