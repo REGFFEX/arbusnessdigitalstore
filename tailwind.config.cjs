@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}', './src/styles/**/*.{css,scss}'],
   theme: {
     extend: {
       colors: {
@@ -40,3 +40,12 @@ module.exports = {
   },
   plugins: []
 }
+
+// Ensure utilities used only via @apply are not purged
+module.exports.safelist = [
+  'bg-black', 'text-white', 'bg-gold', 'text-black',
+  'bg-zinc-900', 'bg-zinc-800', 'border-zinc-800', 'placeholder-gray-500',
+  'hover:scale-105', 'hover:shadow-gold', 'focus:border-gold',
+  'px-6', 'py-3', 'rounded-lg', 'font-semibold', 'transition-all', 'duration-300',
+  'w-full', 'p-3', 'rounded-xl', 'text-xs'
+]
