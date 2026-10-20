@@ -58,7 +58,7 @@ export function useSettings() {
         },
         premium_config: []
     })
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         async function loadSettings() {
@@ -106,8 +106,6 @@ export function useSettings() {
                 }
             } catch (err) {
                 console.error('Failed to load settings:', err)
-            } finally {
-                setLoading(false)
             }
         }
 

@@ -58,7 +58,6 @@ export const CATEGORIES_CONFIG: Record<string, CategoryConfig> = {
             'Langue & Alphabétisation',
         ],
         platforms: [
-            'Android (APK)',
             'iOS (iPhone & iPad)',
             'Windows (Microsoft Store)',
             'Mac OS',
@@ -136,8 +135,6 @@ export const CATEGORIES_CONFIG: Record<string, CategoryConfig> = {
     'Jeu': {
         subtypes: [
             // Plateformes Mobiles
-            'Mobile — Hors Ligne (Android)',
-            'Mobile — En Ligne (Android)',
             'Mobile — Hors Ligne (iOS)',
             'Mobile — En Ligne (iOS)',
             // PC / Desktop
@@ -175,7 +172,6 @@ export const CATEGORIES_CONFIG: Record<string, CategoryConfig> = {
             'Musique & Rythme',
         ],
         platforms: [
-            'Android',
             'iOS',
             'Windows',
             'Linux',
@@ -192,7 +188,7 @@ export const CATEGORIES_CONFIG: Record<string, CategoryConfig> = {
         subtypes: [
             // Numérique & Tech
             'Programmation & Développement Web',
-            'Développement Mobile (Android / iOS)',
+            'Développement Mobile (iOS)',
             'Intelligence Artificielle & Machine Learning',
             'Cybersécurité & Ethical Hacking',
             'Réseaux & Administration Système',
@@ -318,7 +314,6 @@ export const CATEGORIES_CONFIG: Record<string, CategoryConfig> = {
             'Windows',
             'Mac OS',
             'Linux',
-            'Android',
             'iOS',
             'Web (Extension / Plugin)',
             'Cross-Platform',
@@ -355,7 +350,6 @@ export const CATEGORIES_CONFIG: Record<string, CategoryConfig> = {
             'Adobe XD / Illustrator / Photoshop',
             'WordPress',
             'Canva',
-            'Android Studio',
             'Visual Studio Code',
         ]
     },
@@ -456,7 +450,6 @@ export const PLACEMENTS = [
 //  OS / PLATEFORMES GLOBALES (pour les filtres store)
 // ============================================================
 export const OS_LIST = [
-    'Android',
     'iOS',
     'Windows',
     'Mac OS',

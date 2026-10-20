@@ -288,7 +288,7 @@ export default function AdminDashboard() {
             <NavItem to="visual" variant="gold" icon={<IconPackage size={15} />} label="Gestion Visuelle" />
           </div>
 
-          {/* ── Mobile Android-First Summary Nav ── */}
+          {/* ── Mobile Summary Nav ── */}
           <div className="lg:hidden flex items-center justify-between bg-zinc-800/40 p-1.5 rounded-2xl border border-zinc-800/50">
              <div className="flex gap-1 overflow-x-auto scrollbar-hide px-2">
                 <NavItem to="add" variant="gold" icon={<IconPlus size={14} />} label="Ajouter" />
@@ -303,7 +303,7 @@ export default function AdminDashboard() {
 
       {/* ── Contenu ── */}
       <div className="max-w-7xl mx-auto px-4 py-6 mb-20">
-        {/* Bouton Retour — Android-first (flèche seule en mobile) */}
+        {/* Bouton Retour — Mobile (flèche seule en mobile) */}
         <button
           onClick={() => navigate(-1)}
           className="flex items-center gap-2 mb-4 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl text-sm font-bold text-zinc-500 border border-transparent hover:border-zinc-700/60 hover:text-white hover:bg-zinc-800/40 active:scale-95 transition-all duration-200"

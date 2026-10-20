@@ -4,9 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "dev:desktop": "npm.cmd run dev & npm.cmd exec -- tauri dev",
     "build": "vite build",
-    "build:desktop": "npm.cmd run build & npm.cmd exec -- tauri build",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx}\"",
     "prisma:generate": "prisma generate",

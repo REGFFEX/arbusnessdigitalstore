@@ -7,7 +7,7 @@ import JSZip from 'jszip';
 import CryptoJS from 'crypto-js';
 import type { ArchivableItem, ArchiveFolder } from '../utils/archiveUtils';
 
-const SYSTEM_BACKUP_KEY = 'AR_BUSINESS_CORE_SECURE_KEY_2026';
+const SYSTEM_BACKUP_KEY = import.meta.env.VITE_BACKUP_ENCRYPTION_KEY || 'AR_BUSINESS_CORE_SECURE_KEY_2026';
 
 export const exportService = {
     // Export en Texte simple

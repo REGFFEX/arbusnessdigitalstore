@@ -891,7 +891,7 @@ const EditProductModal = React.memo(({
                       ×
                     </button>
                     <input
-                      placeholder="Label (ex: Windows .exe / Android APK)"
+                      placeholder="Label (ex: Windows .exe / iOS .ipa)"
                       value={v.label}
                       onChange={e => onVersionUpdate(i, 'label', e.target.value)}
                       className="w-full bg-zinc-900 border border-zinc-800 rounded-xl p-2.5 text-xs text-white focus:border-gold outline-none"

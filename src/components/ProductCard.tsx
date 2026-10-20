@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSettings } from '../hooks/useSettings'
-import { IconDownload, IconArrowRight, IconStar, IconAndroid, IconWindows, IconGlobe, IconLinux, IconApple, IconHeart } from './Icons'
+import { IconDownload, IconArrowRight, IconStar, IconWindows, IconGlobe, IconLinux, IconApple, IconHeart } from './Icons'
 import { formatPriceFCFA, formatPriceUSD, formatPriceEUR } from '../utils/currency'
 import { isInWishlist, toggleWishlist } from '../utils/wishlist'
 
@@ -196,8 +196,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               if (product.versions && Array.isArray(product.versions)) {
                 product.versions.forEach((v: any) => {
                   const label = (v.label || v.os || '').toLowerCase();
-                  if (label.includes('android')) platforms.add('android');
-                  else if (label.includes('windows') || label.includes('exe')) platforms.add('windows');
+                  if (label.includes('windows') || label.includes('exe')) platforms.add('windows');
                   else if (label.includes('ios') || label.includes('macos') || label.includes('apple') || label.includes('ipa') || label.includes('dmg')) platforms.add('apple');
                   else if (label.includes('linux') || label.includes('deb') || label.includes('rpm') || label.includes('appimage')) platforms.add('linux');
                   else if (label) platforms.add(label);
@@ -210,7 +209,6 @@ export default function ProductCard({ product }: ProductCardProps) {
                 return (
                   <div className="flex -space-x-1.5 hover:space-x-1 transition-all">
                     {platformList.map((p, idx) => {
-                      const isAndroid = p.includes('android');
                       const isWindows = p.includes('windows');
                       const isApple = p.includes('apple') || p.includes('ios') || p.includes('macos');
                       const isLinux = p.includes('linux');
@@ -220,13 +218,11 @@ export default function ProductCard({ product }: ProductCardProps) {
                           key={idx}
                           title={p}
                           className={`w-6 h-6 rounded-full border-2 border-zinc-900 flex items-center justify-center transition-transform hover:-translate-y-1 hover:z-30 cursor-help shadow-lg
-                            ${isAndroid ? 'bg-green-500/20 text-green-500 border-green-500/30' :
-                              isWindows ? 'bg-blue-400/20 text-blue-400 border-blue-400/30' :
+                            ${isWindows ? 'bg-blue-400/20 text-blue-400 border-blue-400/30' :
                                 isApple ? 'bg-white/20 text-white border-white/30' :
                                   isLinux ? 'bg-orange-400/20 text-orange-400 border-orange-400/30' : 'bg-gold/20 text-gold border-gold/30'}`}
                         >
-                          {isAndroid ? <IconAndroid size={10} strokeWidth={2.5} /> :
-                            isWindows ? <IconWindows size={10} strokeWidth={2.5} /> :
+                          {isWindows ? <IconWindows size={10} strokeWidth={2.5} /> :
                               isApple ? <IconApple size={10} strokeWidth={2.5} /> :
                                 isLinux ? <IconLinux size={10} strokeWidth={2.5} /> :
                                   <IconGlobe size={10} strokeWidth={2.5} />}

@@ -91,7 +91,14 @@ export default function App() {
     }
   }, [user, isAdminPath, signOut, ADMIN_BASE])
 
-  if (loading) return null
+  if (loading) return (
+    <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 border-4 border-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+        <p className="text-gold font-bold tracking-widest">CHARGEMENT...</p>
+      </div>
+    </div>
+  )
 
   const showMaintenance = settings?.maintenance_mode && !isAdminPath
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useBranding } from '../context/BrandingContext'
 import { useSettings } from '../hooks/useSettings'
+import { useTheme } from '../context/ThemeContext'
 import {
     IconX,
     IconGlobe,
@@ -17,13 +18,16 @@ import {
     IconHome,
     IconFolder,
     IconZap,
-    IconCenterLogo
+    IconCenterLogo,
+    IconSun,
+    IconMoon
 } from './Icons'
 import SmartSearch from './SmartSearch'
 
 export default function Navbar() {
     const { settings } = useSettings()
     const { setIsBrandingOpen } = useBranding()
+    const { theme, toggleTheme } = useTheme()
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false)
     const [isSearchFocused, setIsSearchFocused] = useState(false)
@@ -147,6 +151,13 @@ export default function Navbar() {
                             <IconCenterLogo size={18} className="text-gold group-hover:text-white" />
                             Centre AR
                         </Link>
+                        <button
+                            onClick={toggleTheme}
+                            className="w-10 h-10 flex items-center justify-center bg-zinc-900 rounded-xl text-gold hover:bg-zinc-800 transition-colors"
+                            title={theme === 'dark' ? 'Mode clair' : 'Mode sombre'}
+                        >
+                            {theme === 'dark' ? <IconSun size={18} /> : <IconMoon size={18} />}
+                        </button>
                         {/* Lien Admin masqué — accès direct uniquement via URL sécurisée */}
                     </div>
 
@@ -162,6 +173,13 @@ export default function Navbar() {
                                 </svg>
                             </button>
                         )}
+                        <button
+                            onClick={toggleTheme}
+                            className="w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-2xl text-gold"
+                            title={theme === 'dark' ? 'Mode clair' : 'Mode sombre'}
+                        >
+                            {theme === 'dark' ? <IconSun size={20} /> : <IconMoon size={20} />}
+                        </button>
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="w-12 h-12 flex items-center justify-center bg-zinc-900 rounded-2xl text-white"

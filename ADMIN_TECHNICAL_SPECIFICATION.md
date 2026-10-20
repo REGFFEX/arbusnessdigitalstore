@@ -1,3 +1,5 @@
+
+
 # Spécifications Techniques : Admin Panel (Back Office) — AR BUSINESS STORE II
 
 Ce document décrit l'architecture fonctionnelle actuelle du panneau d'administration et propose des axes d'amélioration pour l'horizon 2027.
@@ -37,7 +39,7 @@ L'interface admin est sécurisée par un chemin d'accès obfusqué (`ARDES_CONFI
 
 ### 2.2 Gestion des Produits (`ManageProducts` & `AddProduct`)
 - **Création/Édition** : Formulaire riche incluant titre, description (courte/longue), taxonomie complète (sous-types, domaines, genres).
-- **Multi-OS Support** : Possibilité d'attacher plusieurs versions de fichiers selon l'OS (Android, Windows, iOS, Mac, Linux).
+- **Multi-OS Support** : Possibilité d'attacher plusieurs versions de fichiers selon l'OS (Windows, iOS, Mac, Linux, Web).
 - **Linking & Packs** : Création de relations entre produits (ex: "Inclus dans le pack").
 - **Monétisation** : Gestion des prix (Euro/FCFA) avec conversion automatique sécurisée.
 - **Auto-Ranking** : Fonctionnalité pour recalculer les "Tops" (Featured, Trending, etc.) basée sur les algorithmes d'engagement.

@@ -31,7 +31,7 @@ export default function AddProduct() {
   const [formData, setFormData] = useFormPersistence('add_product_form', {
     name: '', short_desc: '', description: '', version: '1.0.0', type: 'Application',
     sub_type: 'Productivité & Bureautique',
-    os: 'Android', status: 'Stable', size: '',
+    os: 'Web', status: 'Stable', size: '',
     // Unified Financial System
     price: '0',
     price_fcfa: 0,
@@ -552,7 +552,7 @@ export default function AddProduct() {
               screenshots: screenshotPreviews.length > 0 ? screenshotPreviews : ['https://via.placeholder.com/600x400?text=SANS+SCREENSHOT'],
               category: formData.type || 'Application',
               price: formData.price || '0',
-              os: formData.os || 'Android'
+              os: formData.os || 'Web'
             }}
           />
         </div>

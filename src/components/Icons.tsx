@@ -47,6 +47,21 @@ export const IconFolder = ({ size = 20, className = '', strokeWidth = 2 }: IconP
     </svg>
 )
 
+/** Soleil — Light mode */
+export const IconSun = ({ size = 20, className = '', strokeWidth = 2 }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <circle cx="12" cy="12" r="5" />
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>
+)
+
+/** Lune — Dark mode */
+export const IconMoon = ({ size = 20, className = '', strokeWidth = 2 }: IconProps) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
+)
+
 /** Maison — Accueil */
 export const IconHome = ({ size = 20, className = '', strokeWidth = 2 }: IconProps) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={strokeWidth} strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -491,12 +506,6 @@ export const IconBrain = ({ size = 20, className = '', strokeWidth = 2 }: IconPr
 
 // ── Plateformes ───────────────────────────────────────────────
 
-/** Android Icon */
-export const IconAndroid = ({ size = 20, className = '' }: IconProps) => (
-    <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>
-        <path d="M17.523 15.3414c-.5511 0-.998.4469-.998.998 0 .5511.4469.998.998.998.5511 0 .998-.4469.998-.998 0-.5511-.4469-.998-.998-.998zm-11.046 0c-.5511 0-.998.4469-.998.998 0 .5511.4469.998.998.998.5511 0 .998-.4469.998-.998 0-.5511-.4469-.998-.998-.998zm11.4045-3.5516l1.9961-3.4573c.112-.194.045-.4416-.149-.5536-.194-.112-.4416-.045-.5536.149l-2.0221 3.5024C15.9388 10.4357 14.1207 10 12 10s-3.9388.4357-5.1529 1.4303L4.8251 7.9279c-.112-.194-.3596-.261-.5536-.149-.194.112-.261.3596-.149.5536l1.9961 3.4573C3.6015 13.5651 2 16.5866 2 20h20c0-3.4134-1.6015-6.4349-4.1185-8.2102z" />
-    </svg>
-)
 /** Windows Icon */
 export const IconWindows = ({ size = 20, className = '' }: IconProps) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>

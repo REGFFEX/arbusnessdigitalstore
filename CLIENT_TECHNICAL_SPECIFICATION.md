@@ -30,7 +30,7 @@ L'interface est conçue avec une esthétique "Gold & Black" premium, optimisée 
 - **Tops & Tendances** : Sections dédiées aux produits les mieux notés (Top 10) et aux tendances du moment (Trending).
 
 ### 2.3 Page Produit (Fiche Technique)
-- **Multi-OS Versioning** : Interface permettant de choisir la version spécifique à son système (Android, Windows, macOS, etc.) avec icônes dédiées.
+- **Multi-OS Versioning** : Interface permettant de choisir la version spécifique à son système (Windows, iOS, macOS, Linux, Web, etc.) avec icônes dédiées.
 - **Système de Téléchargement Sécurisé** : 
     - **Mode Public** : Téléchargement direct.
     - **Mode Privé** : Accès réservé avec gestion de la monétisation.

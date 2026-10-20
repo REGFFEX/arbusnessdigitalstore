@@ -6,7 +6,7 @@ import { createDownloadToken } from '../services/downloads'
 import Badge from '../components/Badge'
 import ProductCard from '../components/ProductCard'
 import { supabase } from '../config/supabase'
-import { IconArrowLeft, IconArrowRight, IconDownload, IconSettings, IconPackage, IconX, IconLock, IconGlobe, IconBriefcase, IconAndroid, IconWindows, IconLinux, IconApple, IconShare, IconHeart } from '../components/Icons'
+import { IconArrowLeft, IconArrowRight, IconDownload, IconSettings, IconPackage, IconX, IconLock, IconGlobe, IconBriefcase, IconWindows, IconLinux, IconApple, IconShare, IconHeart } from '../components/Icons'
 import AdWall from '../components/AdWall'
 import { useAds } from '../context/AdsContext'
 import PaymentModal from '../components/PaymentModal'
@@ -17,7 +17,6 @@ import HorizontalShelf from '../components/HorizontalShelf'
 
 const getOSIcon = (os: string, size = 16) => {
   const label = os?.toLowerCase() || ''
-  if (label.includes('android')) return <IconAndroid size={size} className="text-green-500" />
   if (label.includes('windows')) return <IconWindows size={size} className="text-blue-400" />
   if (label.includes('linux')) return <IconLinux size={size} className="text-orange-500" />
   if (label.includes('apple') || label.includes('ios') || label.includes('mac')) return <IconApple size={size} className="text-zinc-300" />
