@@ -34,14 +34,22 @@ Dernière vérification technique : 9 novembre 2026.
 
 ### Étapes de déblocage
 
-1. Créer le compte super admin dans Supabase Auth (email + mot de passe, email confirmé).
-2. Insérer la ligne `admins` correspondante (`role = master`, `status = active`).
-3. Créer la ligne singleton `site_settings` (`id = current`) avec les valeurs par défaut.
-4. Vérifier les politiques RLS (lecture publique du catalogue, écriture authentifiée).
-5. Charger un jeu de données initial : catégories, sous-types, produits.
+1. ✅ Compte auth super admin : `ahrafalnazar@gmail.com` existe et est confirmé.
+2. ✅ Ligne `admins` créée (`role = master`, `status = active`) — c'est ce qui manquait pour
+   ouvrir la zone admin.
+3. ✅ Ligne singleton `site_settings` (`id = current`) créée avec les valeurs par défaut.
+4. ⬜ Audit des politiques RLS (lecture publique du catalogue, écriture authentifiée).
+5. ⬜ Jeu de données initial : catégories, sous-types, produits.
 
-Les étapes 1 à 3 sont exécutées par l'agent dès que la clé `SUPABASE_SERVICE_ROLE_KEY` est
-fournie (les écritures d'authentification exigent cette clé ; la clé `anon` ne le permet pas).
+### Corrections de schéma réalisées
+
+- `products.views_count` n'existe pas : le tableau de performance admin ne requête plus cette
+  colonne (les vues ne sont pas suivies, la conversion se base sur les téléchargements).
+
+### Vérifié le 9 novembre 2026
+
+Connexion réelle via le formulaire admin → redirection vers `/ardes-gate-88` (MASTER OVERVIEW),
+0 requête en erreur, 0 erreur console.
 
 ## Bloc 3 — Modes d'affichage
 
