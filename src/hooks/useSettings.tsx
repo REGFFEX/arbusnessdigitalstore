@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { getSiteSettings } from '../services/admin'
-import { supabase } from '../config/supabase'
 
 export interface SiteSettings {
     site_name: string
@@ -64,14 +63,8 @@ export function useSettings() {
         async function loadSettings() {
             try {
                 const data = await getSiteSettings()
-
-                // On charge la config premium séparément ou via getSiteSettings si modifié
-                // Pour l'instant on fait un fetch ici pour être sûr
-                const { data: premiumData } = await supabase
-                    .from('settings')
-                    .select('value')
-                    .eq('key', 'premium_config')
-                    .single()
+                // La config premium vit dans site_settings.site_content
+                const premiumData = data?.site_content?.premium_config
 
                 if (data) {
                     setSettings({
@@ -101,7 +94,7 @@ export function useSettings() {
                             global_ads: true,
                             global_social: true
                         },
-                        premium_config: premiumData?.value || []
+                        premium_config: Array.isArray(premiumData) ? premiumData : []
                     })
                 }
             } catch (err) {

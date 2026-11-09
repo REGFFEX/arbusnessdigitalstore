@@ -52,10 +52,24 @@ export async function getSiteSettings() {
     .from('site_settings')
     .select('*')
     .eq('id', 'current')
-    .single()
-  // If the row doesn't exist yet, return null (UI will use fallbacks)
-  if (error && error.code !== 'PGRST116') throw error
+    .maybeSingle() // the row may not exist yet — UI falls back to defaults
+  if (error) throw error
   return data
+}
+
+// ─── Premium Configuration (stored in site_settings.site_content) ─────────────
+
+export async function getPremiumConfig() {
+  const data = await getSiteSettings()
+  const tiers = data?.site_content?.premium_config
+  return Array.isArray(tiers) ? tiers : []
+}
+
+export async function savePremiumConfig(tiers: any[]) {
+  const data = await getSiteSettings()
+  return updateSiteSettings({
+    site_content: { ...(data?.site_content || {}), premium_config: tiers }
+  })
 }
 
 export async function updateSiteSettings(settings: any) {
