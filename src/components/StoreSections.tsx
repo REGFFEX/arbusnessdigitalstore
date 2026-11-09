@@ -70,16 +70,16 @@ export default function StoreSections() {
         <div className="space-y-16">
             {/* Les mieux notés */}
             <section className="relative group/section">
-                <div className="flex items-center justify-between mb-6 px-1">
-                    <div>
-                        <h2 className="text-xl sm:text-2xl font-black text-white uppercase italic tracking-tighter flex items-center gap-2">
-                            <span className="w-1.5 h-6 bg-gold rounded-full" />
-                            LES MIEUX <span className="text-gold">NOTÉS</span>
+                <div className="flex items-center justify-between gap-3 mb-6 px-1">
+                    <div className="min-w-0">
+                        <h2 className="text-lg sm:text-2xl font-black text-white uppercase italic tracking-tighter flex items-center gap-2 min-w-0">
+                            <span className="w-1.5 h-6 bg-gold rounded-full shrink-0" />
+                            <span className="truncate">LES MIEUX <span className="text-gold">NOTÉS</span></span>
                         </h2>
-                        <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-0.5 ml-3">Approuvés par la communauté</p>
+                        <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-0.5 ml-3 truncate">Approuvés par la communauté</p>
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4 shrink-0">
                         {/* Scroll Buttons for All Devices */}
                         <div className="flex items-center gap-2">
                             <button
@@ -99,7 +99,7 @@ export default function StoreSections() {
                         </div>
                         <button
                             onClick={() => toggleSection('top_rated')}
-                            className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-gold transition-all"
+                            className="flex items-center gap-2 whitespace-nowrap shrink-0 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-gold transition-all"
                         >
                             {expandedSections['top_rated'] ? 'Réduire ↑' : 'Voir Tout →'}
                         </button>
@@ -144,26 +144,26 @@ export default function StoreSections() {
             {/* Plus récents - Style Hub Carrousel */}
             <section className="relative group/section">
                 {/* Header avec bouton "Voir Tout" dynamique */}
-                <div className="flex items-center justify-between mb-6 px-1">
-                    <div>
-                        <h2 className="text-xl sm:text-2xl font-black text-white uppercase italic tracking-tighter flex items-center gap-2">
-                            <span className="w-1.5 h-6 bg-gold rounded-full" />
+                <div className="flex items-center justify-between gap-3 mb-6 px-1">
+                    <div className="min-w-0">
+                        <h2 className="text-lg sm:text-2xl font-black text-white uppercase italic tracking-tighter flex items-center gap-2 min-w-0">
+                            <span className="w-1.5 h-6 bg-gold rounded-full shrink-0" />
                             {settings.store_titles?.hero_title ? (
-                                <>
+                                <span className="truncate">
                                     {settings.store_titles.hero_title.split(' ').map((word: string, i: number, arr: string[]) => (
                                         <span key={i} className={i === arr.length - 1 ? 'text-gold' : ''}>
                                             {word}{' '}
                                         </span>
                                     ))}
-                                </>
+                                </span>
                             ) : (
-                                <>TOP <span className="text-gold">RATED</span></>
+                                <span className="truncate">TOP <span className="text-gold">RATED</span></span>
                             )}
                         </h2>
-                        <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-0.5 ml-3">Derniers ajouts</p>
+                        <p className="text-[10px] text-zinc-600 font-bold uppercase tracking-widest mt-0.5 ml-3 truncate">Derniers ajouts</p>
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2 sm:gap-4 shrink-0">
                         {/* Scroll Buttons for All Devices */}
                         <div className="flex items-center gap-2">
                             <button
@@ -183,7 +183,7 @@ export default function StoreSections() {
                         </div>
                         <button
                             onClick={() => toggleSection('recent')}
-                            className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-gold transition-all"
+                            className="flex items-center gap-2 whitespace-nowrap shrink-0 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-gold transition-all"
                         >
                             {expandedSections['recent'] ? 'Réduire ↑' : 'Voir Tout →'}
                         </button>
@@ -255,7 +255,7 @@ export default function StoreSections() {
                             </div>
                             <button
                                 onClick={() => toggleSection('new')}
-                                className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-gold transition-all"
+                                className="flex items-center gap-2 whitespace-nowrap shrink-0 text-[10px] font-black uppercase tracking-[0.2em] text-zinc-500 hover:text-gold transition-all"
                             >
                                 {expandedSections['new'] ? 'Réduire ↑' : 'Voir Tout →'}
                             </button>

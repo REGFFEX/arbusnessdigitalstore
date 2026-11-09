@@ -35,7 +35,8 @@ import Guide from '../pages/Guide'
 import ServiceDetail from '../pages/ServiceDetail'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import MobileRibbon from '../components/MobileRibbon'
+import AppShell from '../components/shell/AppShell'
+import QuickPalette from '../components/shell/QuickPalette'
 import ScrollToTop from '../components/ScrollToTop'
 import AdVideoOverlay from '../components/AdVideoOverlay'
 import AnnouncementRibbon from '../components/AnnouncementRibbon'
@@ -60,13 +61,17 @@ function AdminFallbackRedirect() {
 
 export default function App() {
   const { settings, loading } = useSettings()
-  const { signOut, user } = useAuth()
+  const { signOut, user, adminData, isAdmin } = useAuth()
   const location = useLocation()
   const ADMIN_BASE = ARDES_CONFIG.ADMIN_PATH
 
   const isAdminPath = location.pathname.startsWith('/admin') ||
     location.pathname.startsWith(`/${ADMIN_BASE}`) ||
     location.pathname.includes('login')
+
+  // L'administration garde sa propre coquille (en-tête + nav dédiés).
+  const isAdminLayout = location.pathname.startsWith('/admin') ||
+    location.pathname.startsWith(`/${ADMIN_BASE}`)
 
   // Inactivity Logout Logic
   useEffect(() => {
@@ -106,13 +111,7 @@ export default function App() {
     return <Maintenance />
   }
 
-  return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
-      <ScrollToTop />
-      {settings?.section_visibility?.global_ads !== false && <AdVideoOverlay />}
-      <AnnouncementRibbon />
-      <Navbar />
-      <main className="flex-1">
+  const routes = (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<Store />} />
@@ -159,10 +158,28 @@ export default function App() {
           {/* Fallback for legacy /admin links redirecting to obfuscated path */}
           <Route path="/admin/*" element={<AdminFallbackRedirect />} />
         </Routes>
-      </main>
-      <Footer />
-      <MobileRibbon />
+  )
+
+  return (
+    <div className="min-h-screen bg-black text-white flex flex-col">
+      <ScrollToTop />
+      {settings?.section_visibility?.global_ads !== false && <AdVideoOverlay />}
+
+      {isAdminLayout ? (
+        <>
+          <AnnouncementRibbon />
+          <Navbar />
+          <main className="flex-1 min-w-0">{routes}</main>
+          <Footer />
+        </>
+      ) : (
+        <AppShell settings={settings} user={user} adminData={adminData} isAdmin={isAdmin}>
+          {routes}
+        </AppShell>
+      )}
+
       <BrandingInfoBlock />
+      <QuickPalette />
     </div>
   )
 }

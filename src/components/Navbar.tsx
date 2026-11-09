@@ -122,7 +122,7 @@ export default function Navbar() {
                     )}
 
                     {/* Navigation Desktop */}
-                    <div className={`${isSearchFocused ? 'hidden' : 'hidden lg:flex'} items-center space-x-6 transition-all duration-500`}>
+                    <div className={`${isSearchFocused ? 'hidden' : 'hidden lg:flex'} items-center gap-3 xl:gap-5 min-w-0 transition-all duration-500`}>
                         <Link to="/" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors">Accueil</Link>
                         <Link to="/store" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors">Store</Link>
                         <Link to="/categories" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors">Catégories</Link>
@@ -146,7 +146,7 @@ export default function Navbar() {
                                 <span className="relative inline-flex rounded-full h-2 w-2 bg-gold"></span>
                             </span>
                         </Link>
-                        <Link to="/about" className="text-sm font-bold text-zinc-400 hover:text-white transition-colors">À propos</Link>
+                        <Link to="/about" className="hidden xl:block text-sm font-bold text-zinc-400 hover:text-white transition-colors">À propos</Link>
                         <Link to="/ar-center" className="text-sm font-black text-gold hover:text-white transition-colors flex items-center gap-2">
                             <IconCenterLogo size={18} className="text-gold group-hover:text-white" />
                             Centre AR

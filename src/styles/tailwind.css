@@ -4,9 +4,19 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     @apply bg-black text-white selection:bg-gold/30 selection:text-white;
     font-feature-settings: "cv02", "cv05", "cv11";
+    /* Pile typographique système — rendu iOS / SF sur Apple, Segoe ailleurs */
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Inter, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Empêche tout débordement horizontal de la page (clip ne crée pas de conteneur de scroll) */
+    overflow-x: clip;
   }
 }
 
@@ -51,13 +61,26 @@
     background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
   }
 
-  .scrollbar-hide::-webkit-scrollbar {
+  .scrollbar-hide::-webkit-scrollbar,
+  .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
 
-  .scrollbar-hide {
+  .scrollbar-hide,
+  .scrollbar-none {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  /* Surfaces « verre dépoli » du shell */
+  .glass-panel {
+    background-color: rgba(11, 11, 14, 0.72);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    backdrop-filter: blur(24px) saturate(160%);
+  }
+
+  .safe-bottom {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
   }
 
   @keyframes marquee {
