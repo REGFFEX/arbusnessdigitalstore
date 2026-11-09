@@ -43,6 +43,8 @@ import AnnouncementRibbon from '../components/AnnouncementRibbon'
 import BrandingInfoBlock from '../components/BrandingInfoBlock'
 import SecureDownload from '../pages/SecureDownload'
 import ARCenter from '../pages/ARCenter'
+import Information from '../pages/Information'
+import ProductInformation from '../pages/Admin/ProductInformation'
 import { useLocation } from 'react-router-dom'
 import { useSettings } from '../hooks/useSettings'
 import Maintenance from '../pages/Maintenance'
@@ -128,6 +130,7 @@ export default function App() {
           <Route path="/guide" element={<Guide />} />
           <Route path="/secure-download" element={<SecureDownload />} />
           <Route path="/ar-center" element={<ARCenter />} />
+          <Route path="/informations" element={<Information />} />
 
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path={`/${ADMIN_BASE}/login`} element={<AdminLogin />} />
@@ -147,6 +150,7 @@ export default function App() {
               <Route path="stats" element={<DataStats />} />
               <Route path="archives" element={<AdminArchives />} />
               <Route path="center" element={<ManageCenter />} />
+              <Route path="information" element={<ProductInformation />} />
               <Route path="manage-community" element={<ManageCommunity />} />
               <Route path="categories" element={<ManageCategories />} />
               <Route path="settings" element={<AdminSettings />} />

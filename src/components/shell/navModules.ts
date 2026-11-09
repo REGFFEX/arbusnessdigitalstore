@@ -14,6 +14,7 @@ import {
     IconPackage,
     IconSearch,
     IconDownload,
+    IconInfoCircle,
 } from '../Icons'
 
 export type ShellIcon = ComponentType<{ size?: number; className?: string; strokeWidth?: number }>
@@ -57,6 +58,7 @@ export const MODULE_GROUPS: ShellGroup[] = [
             { label: 'Communauté', path: '/community', icon: IconMessageCircle, hint: 'Flux de nouvelles' },
             { label: 'Roadmap', path: '/roadmap', icon: IconTrending, hint: 'Vision 2026' },
             { label: 'Guide & Aide', path: '/guide', icon: IconHelpCircle, hint: 'Tutoriels' },
+            { label: 'Informations', path: '/informations', icon: IconInfoCircle, hint: 'Organisation & produit' },
             { label: 'À propos', path: '/about', icon: IconGlobe, hint: 'Notre vision' },
         ],
     },
