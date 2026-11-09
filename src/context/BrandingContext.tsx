@@ -36,7 +36,7 @@ export function BrandingProvider({ children }: { children: React.ReactNode }) {
 
     const refreshBranding = async () => {
         try {
-            const { data: settings } = await supabase.from('site_settings').select('*').eq('id', 'current').single()
+            const { data: settings } = await supabase.from('site_settings').select('*').eq('id', 'current').maybeSingle()
             const { data: messages } = await supabase.from('branding_messages').select('*').order('created_at', { ascending: true })
 
             if (settings) {

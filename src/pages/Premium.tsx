@@ -4,7 +4,7 @@ import { getProducts } from '../services/products'
 import ProductCard from '../components/ProductCard'
 import { SiteNavBar, SiteNavFooter } from '../components/SiteNav'
 import { IconShield, IconArrowRight, IconCheck, IconX } from '../components/Icons'
-import { supabase } from '../config/supabase'
+import { getPremiumConfig } from '../services/admin'
 import PaymentModal from '../components/PaymentModal'
 
 // Icônes SVG inline pour les avantages Premium (rôle-spécifique)
@@ -120,10 +120,11 @@ export default function Premium() {
             .finally(() => setLoading(false))
 
         // Load tiers config
-        supabase.from('settings').select('value').eq('key', 'premium_config').single()
-            .then(({ data }) => {
-                if (data?.value) setTiers(data.value as any[])
+        getPremiumConfig()
+            .then((config) => {
+                if (config.length) setTiers(config as any[])
             })
+            .catch((e) => console.error(e))
     }, [])
 
     const handleSubscribe = (tier: any) => {

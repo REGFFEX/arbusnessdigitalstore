@@ -104,7 +104,7 @@ export default function Hero() {
     const slide = HERO_SLIDES[currentSlide]
 
     return (
-        <section className="relative bg-black pt-24 sm:pt-32 pb-12 px-4 overflow-hidden">
+        <section className="relative bg-black pt-8 sm:pt-12 pb-12 px-4 overflow-hidden">
             {/* Background glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gold/10 rounded-full blur-[120px] opacity-40" />

@@ -19,6 +19,7 @@ import {
   IconShield,
   IconX,
   IconCenterLogo,
+  IconInfoCircle,
   IconStats
 } from '../../components/Icons'
 import AIAgentSystem from '../../components/AI/AIAgentSystem'
@@ -276,6 +277,7 @@ export default function AdminDashboard() {
             <NavItem to="services" icon={<IconBriefcase size={15} />} label="Services" />
             <NavItem to="manage-community" icon={<IconUsers size={15} />} label="Communauté" />
             <NavItem to="center" variant="gold" icon={<IconCenterLogo size={15} />} label="Centre AR" />
+            <NavItem to="information" variant="gold" icon={<IconInfoCircle size={15} />} label="Informations" />
             <NavItem to="projects" variant="blue" icon={<IconBriefcase size={15} />} label="Projets" />
             {isAdmin && adminData?.role === 'master' && (
               <NavItem to="users" variant="blue" icon={<IconUsers size={15} />} label="Admins" />

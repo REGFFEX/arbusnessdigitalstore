@@ -35,13 +35,16 @@ import Guide from '../pages/Guide'
 import ServiceDetail from '../pages/ServiceDetail'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import MobileRibbon from '../components/MobileRibbon'
+import AppShell from '../components/shell/AppShell'
+import QuickPalette from '../components/shell/QuickPalette'
 import ScrollToTop from '../components/ScrollToTop'
 import AdVideoOverlay from '../components/AdVideoOverlay'
 import AnnouncementRibbon from '../components/AnnouncementRibbon'
 import BrandingInfoBlock from '../components/BrandingInfoBlock'
 import SecureDownload from '../pages/SecureDownload'
 import ARCenter from '../pages/ARCenter'
+import Information from '../pages/Information'
+import ProductInformation from '../pages/Admin/ProductInformation'
 import { useLocation } from 'react-router-dom'
 import { useSettings } from '../hooks/useSettings'
 import Maintenance from '../pages/Maintenance'
@@ -60,13 +63,17 @@ function AdminFallbackRedirect() {
 
 export default function App() {
   const { settings, loading } = useSettings()
-  const { signOut, user } = useAuth()
+  const { signOut, user, adminData, isAdmin } = useAuth()
   const location = useLocation()
   const ADMIN_BASE = ARDES_CONFIG.ADMIN_PATH
 
   const isAdminPath = location.pathname.startsWith('/admin') ||
     location.pathname.startsWith(`/${ADMIN_BASE}`) ||
     location.pathname.includes('login')
+
+  // L'administration garde sa propre coquille (en-tête + nav dédiés).
+  const isAdminLayout = location.pathname.startsWith('/admin') ||
+    location.pathname.startsWith(`/${ADMIN_BASE}`)
 
   // Inactivity Logout Logic
   useEffect(() => {
@@ -106,13 +113,7 @@ export default function App() {
     return <Maintenance />
   }
 
-  return (
-    <div className="min-h-screen bg-black text-white flex flex-col">
-      <ScrollToTop />
-      {settings?.section_visibility?.global_ads !== false && <AdVideoOverlay />}
-      <AnnouncementRibbon />
-      <Navbar />
-      <main className="flex-1">
+  const routes = (
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/store" element={<Store />} />
@@ -129,6 +130,7 @@ export default function App() {
           <Route path="/guide" element={<Guide />} />
           <Route path="/secure-download" element={<SecureDownload />} />
           <Route path="/ar-center" element={<ARCenter />} />
+          <Route path="/informations" element={<Information />} />
 
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path={`/${ADMIN_BASE}/login`} element={<AdminLogin />} />
@@ -148,6 +150,7 @@ export default function App() {
               <Route path="stats" element={<DataStats />} />
               <Route path="archives" element={<AdminArchives />} />
               <Route path="center" element={<ManageCenter />} />
+              <Route path="information" element={<ProductInformation />} />
               <Route path="manage-community" element={<ManageCommunity />} />
               <Route path="categories" element={<ManageCategories />} />
               <Route path="settings" element={<AdminSettings />} />
@@ -159,10 +162,28 @@ export default function App() {
           {/* Fallback for legacy /admin links redirecting to obfuscated path */}
           <Route path="/admin/*" element={<AdminFallbackRedirect />} />
         </Routes>
-      </main>
-      <Footer />
-      <MobileRibbon />
+  )
+
+  return (
+    <div className="min-h-screen bg-black text-white flex flex-col">
+      <ScrollToTop />
+      {settings?.section_visibility?.global_ads !== false && <AdVideoOverlay />}
+
+      {isAdminLayout ? (
+        <>
+          <AnnouncementRibbon />
+          <Navbar />
+          <main className="flex-1 min-w-0">{routes}</main>
+          <Footer />
+        </>
+      ) : (
+        <AppShell settings={settings} user={user} adminData={adminData} isAdmin={isAdmin}>
+          {routes}
+        </AppShell>
+      )}
+
       <BrandingInfoBlock />
+      <QuickPalette />
     </div>
   )
 }

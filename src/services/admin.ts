@@ -52,10 +52,24 @@ export async function getSiteSettings() {
     .from('site_settings')
     .select('*')
     .eq('id', 'current')
-    .single()
-  // If the row doesn't exist yet, return null (UI will use fallbacks)
-  if (error && error.code !== 'PGRST116') throw error
+    .maybeSingle() // the row may not exist yet — UI falls back to defaults
+  if (error) throw error
   return data
+}
+
+// ─── Premium Configuration (stored in site_settings.site_content) ─────────────
+
+export async function getPremiumConfig() {
+  const data = await getSiteSettings()
+  const tiers = data?.site_content?.premium_config
+  return Array.isArray(tiers) ? tiers : []
+}
+
+export async function savePremiumConfig(tiers: any[]) {
+  const data = await getSiteSettings()
+  return updateSiteSettings({
+    site_content: { ...(data?.site_content || {}), premium_config: tiers }
+  })
 }
 
 export async function updateSiteSettings(settings: any) {
@@ -283,9 +297,10 @@ export async function getStatsSummary() {
  * Get performance metrics for products (downloads, views, conversion rate).
  */
 export async function getProductPerformance() {
+  // La table products ne stocke pas de compteur de vues : on s'appuie sur les téléchargements
   const { data: products, error: pError } = await supabase
     .from('products')
-    .select('id, name, views_count, status')
+    .select('id, name, status')
 
   if (pError) throw pError
 
@@ -301,17 +316,16 @@ export async function getProductPerformance() {
     dlCountMap[dl.product_id] = (dlCountMap[dl.product_id] || 0) + 1
   })
 
-  // Merge
+  // Merge (pas de compteur de vues en base : la conversion vaut 100 % dès un téléchargement)
   const performance = products.map(p => {
     const dls = dlCountMap[p.id] || 0
-    const views = p.views_count || 1 // Avoid division by zero
     return {
       id: p.id,
       name: p.name,
       status: p.status,
-      views: p.views_count || 0,
+      views: 0,
       downloads: dls,
-      conversion: ((dls / Math.max(views, 1)) * 100).toFixed(1)
+      conversion: dls > 0 ? '100.0' : '0.0'
     }
   })
 

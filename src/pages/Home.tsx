@@ -73,10 +73,10 @@ export default function Home() {
 
       {/* Section Catégories Premium */}
       {settings?.section_visibility?.home_categories !== false && (
-        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 relative">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10 sm:mb-14">
+            <div className="min-w-0">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.05]">
                 PARCOURIR PAR <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-600">UNIVERS</span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-gold to-transparent rounded-full mt-3"></div>
@@ -84,7 +84,7 @@ export default function Home() {
             <SiteNavBar />
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-5">
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-3 sm:gap-4">
             {Object.keys(CATEGORY_ICONS).filter(k => k !== 'Default').map((catName) => {
               const colorClass = CAT_COLORS[catName] || 'from-zinc-500/20 text-zinc-400'
               const [fromClass, textClass] = colorClass.split(' ')
@@ -92,21 +92,18 @@ export default function Home() {
                 <Link
                   key={catName}
                   to={`/categories?category=${catName.toLowerCase()}`}
-                  className="group relative overflow-hidden bg-zinc-900/40 p-6 rounded-[2.5rem] border border-zinc-800 transition-all duration-700 hover:scale-105 hover:border-gold/40 hover:bg-zinc-900/80 text-center flex flex-col items-center gap-4 shadow-xl hover:shadow-gold/5"
+                  className="group relative overflow-hidden bg-white/[0.035] p-3 sm:p-4 rounded-[24px] border border-white/[0.07] transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/35 hover:bg-white/[0.06] text-center flex flex-col items-center gap-2.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${fromClass} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700`}></div>
-                  <div className={`relative ${textClass} transition-all duration-700 group-hover:scale-125 group-hover:rotate-6 group-hover:drop-shadow-[0_0_15px_currentColor]`}>
+                  <div className={`absolute inset-0 bg-gradient-to-br ${fromClass} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500`}></div>
+                  <div className={`relative w-11 h-11 rounded-2xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center ${textClass} transition-transform duration-300 group-hover:scale-105`}>
                     {(() => {
                       const Icon = CATEGORY_ICONS[catName] || CATEGORY_ICONS.Default
-                      return <Icon size={28} strokeWidth={1.8} />
+                      return <Icon size={20} strokeWidth={1.8} />
                     })()}
                   </div>
-                  <div className="relative">
-                    <h3 className="font-black text-[11px] uppercase tracking-[0.2em] text-zinc-500 group-hover:text-white transition-colors duration-500">
-                      {catName}
-                    </h3>
-                    <div className="w-0 h-0.5 bg-gold mx-auto mt-1 group-hover:w-full transition-all duration-500 rounded-full opacity-50"></div>
-                  </div>
+                  <h3 className="relative font-bold text-[10px] uppercase tracking-[0.14em] text-zinc-400 group-hover:text-white transition-colors duration-300 truncate w-full">
+                    {catName}
+                  </h3>
                 </Link>
               )
             })}

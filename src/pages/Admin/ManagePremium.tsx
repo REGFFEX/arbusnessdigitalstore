@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { supabase } from '../../config/supabase'
+import { getPremiumConfig, savePremiumConfig } from '../../services/admin'
 import { IconCheck, IconX, IconShield, IconEdit, IconPlus } from '../../components/Icons'
 
 // ── Types ──
@@ -113,14 +113,9 @@ export default function ManagePremium() {
 
     async function loadConfig() {
         try {
-            const { data, error } = await supabase
-                .from('settings')
-                .select('value')
-                .eq('key', 'premium_config')
-                .single()
-
-            if (data?.value) {
-                setTiers(data.value as PremiumTier[])
+            const config = await getPremiumConfig()
+            if (config.length) {
+                setTiers(config as PremiumTier[])
             }
         } catch (e) {
             console.log('No premium config found, using defaults')
@@ -133,16 +128,8 @@ export default function ManagePremium() {
         setSaving(true)
         setMessage(null)
         try {
-            // Upsert into settings
-            const { error } = await supabase
-                .from('settings')
-                .upsert({
-                    key: 'premium_config',
-                    value: tiers,
-                    updated_at: new Date().toISOString()
-                }, { onConflict: 'key' })
-
-            if (error) throw error
+            // Save into site_settings.site_content
+            await savePremiumConfig(tiers)
             setMessage({ type: 'success', text: 'Configuration Premium sauvegardée avec succès !' })
             setTimeout(() => setMessage(null), 4000)
         } catch (err: any) {
